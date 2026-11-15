@@ -194,18 +194,31 @@
     -webkit-user-select:text;user-select:text;
   }
 
+  .acts{flex:0 0 auto;display:flex;align-items:center;gap:1px;margin:-3px -4px 0 0}
   .act{
-    flex:0 0 auto;width:32px;height:32px;margin-top:-3px;padding:0;
+    flex:0 0 auto;width:32px;height:32px;padding:0;
     display:grid;place-items:center;border:0;border-radius:9px;
     background:transparent;color:var(--muted);opacity:.8;
-    transition:opacity .15s,background-color .15s;
+    transition:opacity .15s,background-color .15s,color .15s;
   }
   .act:active{background:var(--line);opacity:1}
   .act.del:active{color:#B4685F}
+  .act.move{color:var(--accent-ink);opacity:.85}
   @media (hover:hover){
     .task:hover .act{opacity:.55;color:var(--muted)}
     .task:hover .act.del{color:#B4685F}
+    .task:hover .act.move{color:var(--accent-ink)}
     .act:hover{opacity:1}
+  }
+
+  /* ── move all to next day ── */
+  .bulk{display:flex;justify-content:flex-end;margin:-2px 0 9px}
+  .bulk-btn{
+    display:flex;align-items:center;gap:5px;
+    border:0;border-radius:999px;padding:7px 13px 7px 11px;
+    background:var(--accent-soft);color:var(--accent-ink);
+    font-size:12.5px;font-weight:700;white-space:nowrap;
+    animation:rowIn .24s ease both;
   }
 
   .divider{
@@ -259,6 +272,7 @@
     bottom:calc(88px + env(safe-area-inset-bottom));
     display:flex;align-items:center;gap:14px;
     max-width:calc(100% - 32px);
+    width:max-content;
     padding:11px 15px 11px 17px;border-radius:999px;
     background:var(--toast-bg);color:var(--toast-text);
     font-size:13.5px;line-height:1.2;
@@ -320,6 +334,12 @@
     <div class="carry" id="carry" hidden>
       <div class="carry-text" id="carryText"></div>
       <button class="carry-btn" id="carryBtn" type="button">가져오기</button>
+    </div>
+    <div class="bulk" id="bulk" hidden>
+      <button class="bulk-btn" id="bulkBtn" type="button" aria-label="미완료 할 일을 다음날로 넘기기">
+        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10h11M10.5 5.8 14.7 10l-4.2 4.2"/></svg>
+        <span id="bulkText">미완료 다음날로 넘기기</span>
+      </button>
     </div>
     <ul class="list" id="list"></ul>
     <div class="empty" id="empty" hidden>
@@ -386,6 +406,7 @@
     progLabel: $('progLabel'), progPct: $('progPct'), bar: $('barFill'),
     list: $('list'), empty: $('empty'), emptyTitle: $('emptyTitle'), emptySub: $('emptySub'),
     carry: $('carry'), carryText: $('carryText'), carryBtn: $('carryBtn'),
+    bulk: $('bulk'), bulkBtn: $('bulkBtn'), bulkText: $('bulkText'),
     form: $('addForm'), input: $('addInput'), addBtn: $('addBtn'),
     toast: $('toast'), toastMsg: $('toastMsg'), undo: $('undoBtn'),
     scroll: $('scroll')
@@ -393,6 +414,7 @@
 
   var ICON_PENCIL = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19.5 8.5a2.83 2.83 0 0 0-4-4L4 16v4z"/></svg>';
   var ICON_TRASH = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M6.5 7l.8 12.2h9.4L17.5 7"/></svg>';
+  var ICON_NEXT = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12h13.5M13.5 7.5 18 12l-4.5 4.5"/></svg>';
 
   /* ── state ── */
   var store = { v: 1, tasks: {} };
@@ -461,6 +483,7 @@
   }
 
   function renderProgress() {
+    updateBulk();
     var list = tasksOf(view);
     var total = list.length;
     var done = 0;
@@ -483,6 +506,15 @@
     el.progPct.textContent = pct + '%';
   }
 
+  function updateBulk() {
+    var list = tasksOf(view);
+    var pending = 0;
+    for (var i = 0; i < list.length; i++) if (!list[i].done) pending++;
+    if (!pending) { el.bulk.hidden = true; return; }
+    el.bulkText.textContent = '미완료 ' + pending + '개 다음날로 넘기기';
+    el.bulk.hidden = false;
+  }
+
   function esc(s) {
     return String(s)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -498,8 +530,11 @@
       h += '<input class="edit-input" type="text" value="' + esc(t.text) + '" maxlength="200" aria-label="할 일 수정">';
     } else {
       h += '<span class="task-text">' + esc(t.text) + '</span>';
+      h += '<div class="acts">';
+      if (!t.done) h += '<button class="act move" type="button" aria-label="다음날로 넘기기">' + ICON_NEXT + '</button>';
       h += '<button class="act edit" type="button" aria-label="수정">' + ICON_PENCIL + '</button>';
       h += '<button class="act del" type="button" aria-label="삭제">' + ICON_TRASH + '</button>';
+      h += '</div>';
     }
     return h + '</li>';
   }
@@ -689,6 +724,63 @@
     });
   }
 
+  /* ── move to next day ── */
+  function moveToNext(ids) {
+    if (!ids || !ids.length) return;
+    var src = view, next = shift(src, 1);
+    var list = tasksOf(src);
+    var moving = [], seen = Object.create(null);
+    ids.forEach(function (id) {
+      if (seen[id]) return;
+      seen[id] = true;
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].id === id && !list[i].done) { moving.push({ t: list[i], idx: i }); break; }
+      }
+    });
+    if (!moving.length) return;
+
+    var movingIds = moving.map(function (m) { return m.t.id; });
+    var rest = list.filter(function (t) { return movingIds.indexOf(t.id) < 0; });
+    if (rest.length) store.tasks[src] = rest; else delete store.tasks[src];
+
+    var target = ensure(next);
+    var have = Object.create(null);
+    target.forEach(function (t) { have[t.text.trim()] = true; });
+
+    var created = [];
+    moving.forEach(function (m) {
+      var key = m.t.text.trim();
+      if (have[key]) return;
+      have[key] = true;
+      var item = { id: uid(), text: m.t.text, done: false, doneAt: null, createdAt: Date.now() };
+      target.push(item);
+      created.push(item);
+    });
+
+    save();
+    renderList();
+    renderProgress();
+    renderCarry();
+
+    var msg;
+    if (!created.length) msg = '이미 다음날에 있어요';
+    else if (moving.length === 1) msg = '다음날로 넘겼어요';
+    else msg = created.length + '개를 다음날로 넘겼어요';
+
+    toast(msg, function () {
+      var tl = tasksOf(next).filter(function (t) { return created.indexOf(t) < 0; });
+      if (tl.length) store.tasks[next] = tl; else delete store.tasks[next];
+      var back = ensure(src);
+      moving.slice().sort(function (a, b) { return a.idx - b.idx; }).forEach(function (m) {
+        back.splice(Math.min(m.idx, back.length), 0, m.t);
+      });
+      save();
+      renderList();
+      renderProgress();
+      renderCarry();
+    });
+  }
+
   /* ── toast ── */
   function toast(msg, fn) {
     el.toastMsg.textContent = msg;
@@ -717,6 +809,7 @@
     var btn = e.target.closest('button');
     if (btn) {
       if (btn.classList.contains('check')) { toggle(id); return; }
+      if (btn.classList.contains('move')) { moveToNext([id]); return; }
       if (btn.classList.contains('del')) { removeTask(id); return; }
       if (btn.classList.contains('edit')) { startEdit(id); return; }
       return;
@@ -771,6 +864,11 @@
 
   el.carryBtn.addEventListener('click', function () {
     carryOver(el.carry.dataset.src);
+  });
+
+  el.bulkBtn.addEventListener('click', function () {
+    var ids = tasksOf(view).filter(function (t) { return !t.done; }).map(function (t) { return t.id; });
+    moveToNext(ids);
   });
 
   function submitAdd() {
