@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>할 일</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="application-name" content="할 일">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="할 일">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="theme-color" content="#F7F4EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111312" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM3RkEyODQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1NjdBNjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgZmlsbD0idXJsKCNnKSIvPjxwYXRoIGQ9Ik01MiA5MiBMODAgMTE5IEwxMjkgNjYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+">
+<link rel="manifest" href="data:application/manifest+json,data:application/manifest+json,%7B%22name%22%3A%22%ED%95%A0%20%EC%9D%BC%22%2C%22short_name%22%3A%22%ED%95%A0%20%EC%9D%BC%22%2C%22display%22%3A%22standalone%22%2C%22orientation%22%3A%22portrait%22%2C%22background_color%22%3A%22%23F7F4EE%22%2C%22theme_color%22%3A%22%23F7F4EE%22%2C%22lang%22%3A%22ko%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAA88ElEQVR42u29WZdkV5mmuYcz2eBuPsccICQhBBpQSMmQgFKgFEklDSvron9BXdaP6Jteq%2F9HX9bqrqIFIimplChJBiUpAkmIkCJCMbp7%2BOxu5jaeae%2B%2BOO4u1xwRbm52jtnzJIuFEoXcOWfv9%2F2%2BPbxH%2Fh%2F%2F9%2F8pAABg%2FFA8AgAADAAAADAAAADAAAAAAAMAAIDRwbE8AwCA8TQAYbEAAIBxhCUgAAAMAAAAMAAAAMAAAAAAAwAAAAwAAAAwAAAAwAAAAAADAAAADAAAADAAAADIDQ5RQAAAdAAAAIABAADAqOMIwRoQAAAdAAAAYAAAAIABAAAABgAAABgAAABgAAAAgAEAAAAGAAAAecbhGhgAwJgaABeBAQDGE5aAAAAwAAAAwAAAAGDkIQ0UAIAOAAAAMAAAAMAAAAAAAwAAAAwAAAAwAAAAwAAAAKA4EAYHADCuBsA9MACA8YQlIAAADAAAADAAAADAAAAAYDQhDRQAgA4AAAAwAAAAwAAAAAADAAAADAAAAIoOWUAAAHQAAAAwVh0A1wAAAOgAAAAAAwAAAAwAAAAwAAAAwAAAAKDgkAYKAEAHAAAAGAAAAGAAAACAAQAAwAhBGBwAAB0AAACMVQfAKVAAADoAAADAAAAAAAMAAAAMAAAAMAAAAMAAAACgiJAGCgBABwAAABgAAACMPGQBAQDQAQAAwFh1AOwBAwDQAQAAAAYAAAAYAAAAYAAAAIABAAAABgAAABgAAABgAAAAgAEAAEAOIQ4aAGBcDQD5BwAY2w4AYGSRQh78Z3vXze79%2FSmAAhoAwxuKrvJSWmsP6%2FXBX35keEspP%2Fef9sGf3XeDw3%2F2wBsO%2F1AAOgCAQVT0exK%2FJ9X7BboUUkillJJKCOE5rpBSCOG7fqb5VgillOd64rNVW8oojowxcs8MRBiH2X%2BKkjj7mcYYK6wwH%2FzcA2M5%2BPUAMACAoyv%2BnqBaa%2FcqbimUVFopRztKKc9xlVKu6yqpHcdRSgohtNKfXPLfhTiXg9InNgSpSYUQxtgkSYxN4zg2xkRJbIxJ0sQYY6zJ%2FvlSyv12ATcADADgCIovpdRKO67jOI7nep7raqUd7WilpFQfLNdbYcXeHzlQbWPtgQgfXtn%2FLOzhdf8PDCTrLbQjPcf90A%2B1JjUmSZPUpFEcR3GUJEmSJKlJzf7vjx8ABgDwaaIvrbB78m2FkEIrnWm953qu63mOq5WWUmYiuif1Qlhrsr%2F4NHGXB%2F92j7%2FPp7rD%2FrrT4R%2BqldLal0JWSpkl2NSkURLHcRTFURTHcRKnJs3%2Bp0kppZAsFgEGACCMtcIaKaXW2nO9wPN9z3cd13GcvQWcPa3f4%2BPqLO9d4vtiWod6hr0NiYNfT2td1loEpey%2FSZIkTuIwCntRGMVRmqbGGiGlkpIBABgAjFmxv7%2B8o7UueX7JD3zP91xPay2lPFjMyf4mOWytvw9XsPumlf214ziu45ZLZWttmqZRHIVR2A17mRmI%2FWUi2gLAAGAkdV9kgmiskVI6jlPyg1JQ9l1vr9Lfl3xjzWGVlwX%2FX33ID%2Fb6A610OSiXS%2BUpa5MkCeOo2%2Bt0w16SJNnDyXYM8AHAAGBkdN9KKT3XLQXlclDKin0hPkH0pZCj%2BzSkEB80N1JIx3Fc162WK1lb0Ol1u71OFMfZ48IJAAOAovJx3fc9Xym1J%2FrGfHzlZJysUYoPn3QK%2FKAUlIyZCqPw407AcIJjMQDqC%2BjviocV1hgrhPA9r%2Fwx3U9NOoZyf9d%2BaaT4qBN0ep0wioQQSsn9HgKgbx0Awwn6g7HWWqu1nqxUKqVKEJQcpcyHdR%2F1v5u24MAJykEpMVO9Xrfdbbd7nTRNaQigvwYAcCTNssIaY6SUnudNlKqVUsV1XSGEMSZB94%2FmBIk1UshKuVIpV%2BI4bnfbzW4riiJrrVKKU0NwZANg%2FMDRVi2UUhOViYlyNfCDbKnnYH0f3e%2BLE2TP03GcqcmpyepkL%2Bw1O612p50aGgKgA4CBq5KxxlrrOu5EpVotVz3PE1YYa1jiP267lUJmp0ijiajVaTXbrTiJpZRKKroBwADgeMkiz3zPr03UKqWy1pqSf9ANgTXCCtd1Z6ZmahO1drfTaDbCKMxi8nhKgAHAMUi%2FMVLKclCeqFQrpYpSyhiT7icnwzAaAiulnKxOVMuVdrfdbLe6vW62PcDzAQwA%2Bib9QopyqTw1USsHJSHlgfSj%2FkNtCIQQInsR2TZMp9etNxudXkdYgQ0ABgBHLTOtOJD%2BspDCGGOtkYKdx7zZQCqFLJfK5aDc6XXqzUan15V39xE0wAAADmvK3jav7%2FkztelKqZJJ%2F94HT6j7c%2FnKxP55ocwG2t32dmMnjEK2iAEDgHuQfmNNts1bLe%2Bt9aMeBSKzgUq5UgpKrU472yLGBgADgM8hNanjOLXqZG2ilkn%2F4dAeKJwNZFvEjWaj0dpNkoSNAcAA4BNKf2NSqdRkdXK6NuU6rjEc6h8RR5dCTtemq5XqTqPe7LSsMUppMmBAEAYH%2B8v9phyUZqdmSn7p4D4X6j8a73evsdPOidmFyerEVn270%2BuyIgR0ACASk7iOO1ubmahUM6UQbPOOog1Ya1Ob%2Bp5%2FeuFUs93aamzHSayV5uGMuQFQAoxv4S%2BEqFUnZ2szruOkrPWPAdnnB2rViXJQ2mpsN9tNIQStwBgbAO99XAt%2F3%2FPnpueqpbKxNmG5f7zefqq1Pjm7UC1XN3c2wyikFRjbDgDGsfCfnpyaqc1orROW%2B8dyGGRZ05VSOfDObDe2G81dWgEMAMal8K%2BUytbY1Bikf5xtIDVGSTU%2FM18uVWgFMAAY1am%2B97mug8J%2F%2F5wPjPvAyL7nc9AK1HcbUkolJY0ABgAjQmqM4zhz03OTlYnUpBT%2B8PFWQEq5MLMQ%2BKXNnU2ujGEAMDLqn1ZLlYXZBcdx9k95Any0FciGykSlWvKD9a31VrfNctDIg8mPMtZaa%2B3c1OyphVPZsg%2FPBD63XNBan1o4NTc1m40fngkdABQPY4zjOAuzC9VShetdcNetgMxEf3Zq1veD9a11loPoAKBwdZyplMrnTp6tlMoU%2FnB%2FrcChIcQlwRHtAGjwRqt8E9ZaI%2Bz05NT89Kzdj4QEuL8mUmt9euHUxs7WTrOuhJScDhoxA%2BARjJL6p9YqKU%2FOzNeqNQp%2FODrZJsDCzLzveevbm6m1Gg%2FAACB36i9lalLX8U7NLZT8UmISVvyhXyQmqVVrnuutbK7HSaSVZnN4NGAPoOgVWlb7yyRJAi84f%2FJM4AWoP%2FS7uZSJOTTAkv0BhgsUvgPAyYvvAUma1iZrCzNzUsrUEusGx%2BIBqU2VUmdPnF7f3mzsNrRWeEDxDQAKjrFmZmpqfnreCmutRf3h%2BDzAWiulPDm7oJXc2a0ryRJCseH9FVz9jTkxu7Awu2CsYVkWBtFwWmusWZhdODG7wBkzOgAY2jwUQpyYW5iamErSlLIfBkmSplMTU0KI9a0NIYQkVxADgEGqv1Lq9MKpUlBKDeoPg0YKkZq0NlHzXO%2FO%2BooxBg8oIiwBFVX9z5w4XQ5KHPaHIZKatByUzpw4rZRiBRIDgMGpf%2BAHfMcRht0HyMSkgR%2FgARgAHHvTfVj9U9Qf8uEB6Yc9gEGJAcAxtNuoPxTBA1L6gOJAGFwxoPaHonjA0tod9oTpAKDP6n8W9YcieMBZ9gMwAED9AQ%2FgmeQchyiPPM8na6zS6uwC6g9F84CF00vrd0xqpJKIDB0A3EfxL4QQZ%2BZPlYIgTVF%2FKI4HpGkpCM7MnzoYxoABwL3JvzHmxOx8uVRKTMqWGhTJA6RMTFoulU7MzhtjMIHc4vBu8omx5sTcianJKVZ%2BoKh9gDFTk1NWiLWtNXJD6QDgHjromcnp6dpUQtIDFJnEpNO1qZnJadYwMQC4y945mZqszc%2FMp2R8QuGrGZGm6fzM%2FNRkLTEJK5kYAHwWaZqWg9LC7IJlaQ5GBSvswuxCOSilKR0tBgCfgrHG87wzJ85IKTlDDaNjANZKKc%2BcOON5nrF8QwYDgE%2BaJEqqU3MntdZMEhi94kZrfWrupJJcEMsRZAHlZoYIe2r2RCkoJSlLpTBq7F8OKC3MLqxsrio2hOkA4IDUpDOT01MTbJTB6HpAdsBhojYzOc2HjDAA2K%2F9jamWqwsz8xz5h9HvA0y6MDNfLVf5oDwGAMJa6zjOqbkTHPuBcRnzwp6aO%2BE4DpsBQ4cwuOEbQDYZKIhg3IqexdVlWl46gHFth6VMTTo3PVstVzkfDWNFmqbVcnVuejYl5woDGOs5MMUcgHGtfqaofjCAMe2CjeM4p%2BZZ%2BocxngXCnprPNgNY%2FxwOpIEObegvzM67jsupfxhbjDGu4y7Mzt9Zv8NXY%2BgAxoXUpNOT07XqJIs%2FMM5kC0G16uQ0NwMwgHGp%2Fa31PX9%2Beja1jHgAkdp0fnrW93xOhWIAY2AAwp6YXVBa0%2FICZFNCaX2CBFwMYPSLHZNOT05zDRLgMNlleBaCBg9hcAMsdKz1PH9%2BepawT4CPeoA189OzrW47jmM2xugARrLTtSdnF5TWrHVCgZAf4djKI6X1SRaCBtwB8AgGM4WSNJmenKqWq5z7hGKIvpBWWGNMkiZmv2SRQmitlVRKKiGs7Wstk12NnJqo7ezWHU1SEAYwMu2tMZ7jzU%2FPGWtQf8j1moCU1tooiVJjHKUDL5gpTZf9shBWCGms2WnVwzjsRl0hpOs4jnKs6I8RSCmNNfPTc%2B1OhzppUAaAyx53MSVkatL5uVmufUHOq35rbTcKHa3Pzp05N3f29MzJmcnpwA0OD9owjjphe3V77c726u31xUZnVyvH7VO0Z3Y1bH56dnl9JbMW3gsdQLFJTVotV2oTNa59QZ7VP4wjz3GfeOBrXz3%2FlZPTJw7%2Ft4fF3Xc93%2FWmq9OPnv9KJ%2BzeWLv59o131nY2PMdV6qife9y7GjZRa7R2252OUmxSYgBFn1pKzs%2FMCUnoBuS38O9FvQdPPfCdr357ZmJ6rxi3Roq9%2F%2FtI4ZKt%2BEghyn7pa%2BcfffTsI%2B%2FcuvT6e%2F%2FRi3q%2B6%2FfhkJsU8zNznd4ib%2Be40d%2F%2Bx%2B%2FyFI5vaqUmnZqozdRm0pTyH3I6RK2wf%2Ff4d5997Lslv5SV8IfO%2FMhP%2FFMZNju9o9SJ6YWHTn9pc3drq7ntOu4RfytjjO%2F5cRx3el2tNK8JAygk1lrH0acXTkmF9EMe1T9JE9%2F1%2F%2Bnb%2F9tDp750WPrvulIX2d9srC15waPnHgnj8PbGku94R1m%2Bz%2F6ZgR80201jODdxjJAGery11Vxt1nM99n4hl%2BqfZuo%2FX5sz1ih5%2Fwvu2dkhIcVzT3xPCPHna2%2BX%2FdJR1oKMMZ7rTdem17fWHcWR0OOCPZbjwhgT%2BMFsbZq9X8jn%2BHS07ov6HziKFNJa%2B9wT33vyS491ou5R%2FplZ%2FTRbmw78gNwUDKB4BZaxZrY2oxT3fiF%2F017KMIm%2B%2F8Sz%2FVL%2FQwNfWGuffew7p2dORkl0lNLHWquUnq3NGGsEnw4%2BHvS32AM4tvL%2FxNyCtZbyH3Km%2Fqoddp55%2BKmnH%2Fp6n9VfiGzTWCt9cvrEu7cvH7GlyLLTW512nBAQRAdQpAZALMzMc4oZ8qn%2BFx76%2BrOPfcda21%2F1PxBuY83c5OwzX77Qi3pH%2FBFKqYWZeRoADKBI5X%2B1VCHzGXI325XqRt0LDz753OPfO9beVEllrX3igcemqrXEJEedTeVqtVRhNmEAhSn%2FZ6ZmqFkgb7V%2FJ%2Byenz%2F73BPfG8DKpBU2cP2vnP1yFEdH7TOYUBhAwcp%2FChbImfp3o97Z2dM%2F%2FsaPsvOax14FSSmEeOTslwMvOOLdYObU8UEYXP%2FZq1Z4sJAb9Q%2BT8MzsqZ9%2B68e%2B61lh5fE7QHYkdGZieqE2v7y94jnukY7DSTEzNdPqtJlWdACU%2FwD3pv7Tlak99beDUP%2BM7DLwyZkTaZoe8YcyszCAvCOltMJOTk5mx9d4IJCHMRmncckLfvTMC3vqP8DDlJnon545qZQ8YrBz9ptPTk5awblqDCCXpGla8oPJygRXfyEn6r8f9fOT%2BdrcsK6kVEtVR7t9iYmerEyU%2FCBN%2BXA8BpBLZqZmNFd%2FIR%2Fqn5rUd72DsIfBq3%2F2E2vlWtnrQ0a0tVYrPTM1w8vFAHKHtdZ13YlKlY8%2BwvDVX0hrbZwkz3%2F9%2B%2F0Pe7jXqSH6UxBl98smKlXXdamx%2BgVpoH2rtqYmZx3tEPwJwy9HhI2S%2BB%2Befv5LJ784XPXvL8YYRztTkzUiQukA8jPZhDFWKz1ZnTSC8h%2BGX47EafLDCz949NwjeVB%2FKfo2JaSURpjJ6qRW2hjkvx8dAA%2Fx6IMyMcn0xFTg%2BZT%2FMOSCTqlWt%2F3CU99%2F9NwjxpjhplFl286NTqMThf3yIZOawPMnqhM7u3WaADqAHHQA1kopaxM1DqjBkCezVO1e55mHn3rigceMNTnJImx1W0natyzP7LB1baLGYWsMIBcYY0peUA7KXFGB4ap%2FJ%2BxeePDJv3v8u8cU83nPtZGwQog726vG9PP2mTGmHJRLHh%2BKwQCGzV49MlnTSlGPwNCmsVKdsPPklx4bTNDb3c4OIYUQq9trWmvbv8Mm1lqtVG2SnhsDGHaFY4xxtTNRmeD0Jwyx9u%2BG3bPzZ7KI%2F5ykZmbqvN3cWW9suLqfi%2FX750EnXO0YYzjGeBQIgztSgWNSU61WPddL2f6FYal%2F1Dsze%2Fqn3%2Fyxo53BBL3dZZ0upby8dKUX9cp%2B%2BegXwQ6TfTK%2BWq7WGw2lab7pAIZU4wgpJquTglYUhqT%2BYRJ9EPNp86L%2BWXnUi8P3lq54rtdf9Rd7d4ztZHVSSGGpYTGAYdU4ge%2BXy2VOJMMQFFbKKImqQfkn3%2FxPgw96%2B5wK3Rop5ds33qm3Go5yjudH2HK5HPg%2B5T8GMJzpZ4ypVqqO1pbTCDDw4ZekSeAFP%2FnmPwZekCv1z84gbe5uvXHl4tG%2FBvOpP8UYR%2BtqpWoM228YwFBGuVLVcjVXcw%2FGRv1T3%2FWzoLe8jUArbJwmr7752rHG4mb3AKrlquIAHgYwDAMwvueVAg4jwxBaT0frIcZ8fgZZ%2BMRv%2F%2Fr7O1urnuMdqzQbY0pB4HuetcxBDGDQk9BWK1WtCX%2BGAQ68LOYzjb%2F%2FxLNDj%2Fn8NPW%2FdPu9t66%2FU%2FKPa%2FHncBeu91aB6MLvE4c99PsbeVJJ1n9g0ANP2CiJf3jh%2BUfOPpxP9b%2B%2BevPli%2F8SuIPYmz1YBdrc2TI0AXQAgxzrvuez%2FgMD7juTPMV8flz9Nxqbr775a9dxBnYYdX8VyMcAMIDBzUNrbLVSYf0HBjdRlWr32t9%2B9Bt7MZ95Uv%2Fs2M9GY%2FNnf%2FhFGEeD%2FCje%2FipQxbIKhAEMbrgrNVGeYP0HBjRLpWr3Ok8%2F%2FNQzD1%2FIT8znwXSQUm40Nn%2F2h5%2BHcejogUY0Z6tAE%2BUJzgJhAIMb8a7jcgMFBqb%2BWcznc49%2FLycxnx9R%2FzCOfvXGK92o5%2BohfKwxu4%2FpOnwn8n4gC%2BieK47UpJVy2XGcJCH%2FB45Z%2FZXq9DpPfunxXMV87imv2FP%2FF19%2Faadd953hLMQbYxzHqZTL2%2FWdAfcfdADjWP5LISc4%2FwMDqf1zGPN5oP7CijAOX3z9peWtlWGpv%2FhgFaianZFl2GAAx2sAWmvfDxhqcOzqfyjmU0ghc%2BYAUsqX%2Fvirpa07JS8Y7iEca63vBxzKwAAGMdQCP%2FBcFhzheNU%2FTMIzsydzGPMp9pf%2BX3v7325vLJX90tCPYFprPdcNKMswgAE0m5VymSMHcKzDLE7jklf60TMv5C3m87D6X7z2Vskr5eEqTHYwr1IuszCLARz70C8HJcYZHJ%2F6J2mSBb1NlHJ31DiLHvrXv%2Fz24rW3Kv3%2BzMsRK7NyUOJL8RjA8RqA6zhsAMDxCVlq8hvzmV1Ae%2FvGO29c%2FXMlKOfq8m22DeA6nALCAI6x%2FGGQwbGpv5DGGmvtT7%2F145zGfCr17uLl1%2F7y20pQzlsIykFxxteZ7gmHp3VvbWZpr81kCQj6q%2F5W2DiJf3jh%2BRNT8%2FmM%2Bnl38fLLF%2F%2FFy%2BWVq73l2VJpt9UULATRARzPCBPZSQPUH%2Fo8uvZjPnMb9HZ99eb%2F%2FNOrnuPm6zTqh%2BuzwA%2BkFKj%2FPXQAgqvAd20AjnZ8z2N4Qd%2FFK4qjfMZ8HgS9ZTGfed5ltdb6nudo51i%2FREYHML4G4Hue52IA0NcZqFS713nm4afyGfN5KOhtoDGf9%2Ffbeq5HiYYBHEONJqS11vd8bgBAP6eflO1e5%2BmHv%2F63X%2F1WPmM%2Bt5s7%2F%2BP3Pw%2FjKP8xO9ltAN%2Fz83ZvLs8QBne3DiCsCPyAJwH9U3%2FVjfIe8%2FnyxVd7Uc93C%2FPFlcAP9jQNZaMD6O988H2fHWDoC1qpdth%2B9NwjOY%2F5XKuvF0X9s%2F0J3%2Fe5DoYB9N8AHMchAgj6Vft3wt65ubPPPfFsPmM%2Be%2Fsxn4EbFOhri1kokMNNHQyg7wPLdz0%2BOgF9Uf9u1DszeyoLestnzOcrF19d3Fwu%2BUGxvrWbfazJ56QGBtB3XNfN1SotFFT9CxHzeW3lZsXP3XXfu3zCrusy0jCAvnFwx0RwxwSONpDyHPOZhU%2B89pd%2Fu3jtrcDzi1X7HxiY4LYmBnAcZRE7wHBE9c95zKeS6jfv%2FO7i%2B29V%2FHJBCx32ge8VsoDudmRprYUQVnDAGO5HmFJj8hvzaY2S6tLt9y6%2B%2F2YePvBy%2F7WaEEIIrbWQEmWjA%2BhbB%2BDovSNAqD%2Fcs%2FoLaa1N0uQf%2F%2BaHOYz5zK4gvLt4%2BZU%2F%2F9p3%2FUIXzvLgIBBfh8cAGFKQi%2FGzF%2FT2gzOzp3MY9CalPIj5HIH6hnINAziGx6QUq%2F9wf4sSmfo%2Feu6RvF33zdxoeevOvvqPyLKJlDJXoRp5hjTQzx9N1hrf9%2FgMANyHEvWiXj5Dng9iPn%2F5Hy872hmZXdP9IxvebssIqQRdOx3A0dFK8xDg3qaWVJ2we%2BGhr3%2F1%2FFdyqP6HYj5DPXIRh0zYu%2B4AMMjPnSpi7wyooPyHu67922HnwkNPPvvYd%2FKp%2FlnMZ5REo7a5dXASVEhrUDc6AAoKGHjt34vCQsR8uno0002YsBhA3yYMhwrgHmaUUu2w8%2BCpLxLzOZwGgGN7GEDf23kOFcBd1v7dsHdu7swLF57PZ8xnpv6Fi%2Fm8DxvmvAYGADBQ9e%2FFezGfgevnM%2Bbztbd%2Fs7i5VPZHWf0BA%2BhnOxn4fuGCoKWUUkol1aF%2FSWqiY1X%2FMA5PTC3kPObz3cXLFb%2BSmlFW%2FywUOsjCuxian4nDI7iLyqlQui%2BEsTZOEmONsUbYLL7ISqmUlFprrXQWTmA5Ada%2Fxx6nceAFP7zwfD5jPpVUWcxnpchRP6M6bYdpADymzx1GhSiclVTGmiiOjLW%2B683VZqtBZWFqXiuVnV9tdlr1dqPerje7bWNSR7tOFm%2FHRtmR1T9JE9%2F1%2FunbP5mZmM6d%2BhujlPr9pdf%2FdPXNaqlijBmf92KFsDgBHcBRBpG1thQEeb4GnP1u3ajrOd4XT5x%2F%2BMxDJ6YWpqq1Tzx92IvDzcbW7Y3Fq8vv19sNJZXneCwHH%2BXh5z3mU6l3Fy%2B%2FcfXPlaA8JuqfvYVSEDSau0JKLgNjAEed5Hku%2FMM4dB3niQcee%2FKBx2cnZw5Pg8OLPNmSdOD6Z%2BdOn507%2FczDF66tXH%2Fz2tvZcUDy0%2B9nYOzHfP7Tt3%2BcxXzmMOrnIOht3N4vO14YwOgP8W7UPTN7%2BtnHv3NiakEIYfe%2BibS3CfyJ%2B5DWWiuE57iPnnvkkbMP%2F%2Bnqn%2F%2FjysUkTWgF7rnSzHfM5776v%2Bo5nhSSLR%2FAAO5vnuey9hQ2SqJnHr7wna9%2B66B%2Bv5uTPgd%2FS3ZJ9W%2B%2B%2FPS5%2BbP%2F68%2B%2F3mpuj%2FbZ8L67b85jPtfqG6%2B%2B%2BZq7F%2FNpmbbwiQbAg%2FrsQWSd%2FN0Cy2rPF576%2FlfPf8UKe39Lz9kfMdacnD7xv3%2FvP%2F%2Fij79a3FgKvIC1oM9FKdXqtl946vuPnnsk22XN0djYj%2Fl88fWXsqPA4%2FlCHaWylhiJ%2Bwz0N%2F7h2zyFz9ba%2BZk5z%2FPy8zFIKWScJj%2B88IODmMmjLHdm3YOjnUfPPRLG4e2NJd%2FxWC74LPWXqh12nnn4qW8%2B8ky2y5or9d%2BP%2BfxFGIdjGocgpZQyTdN6o8FOwOcMZh5B4dSnG%2FWee%2Fy7e7VnP1YepJRWWCHFc09878KDT7bDTq4WNHKo%2FhcefPLvHv9uPoPemt3mWKs%2FYAAjrf7dr33hK0888Fh%2Fa08pZHamBQ%2F4rOevVDfqXnjwyTwGve3HfP7qjVe6UXdUYz4BAxhfEpPUKpPfe%2Bw7VhxL7ZktB%2BEBn%2Ba%2BnbB7fv5szmM%2Bl7dWfcdnMx8wgFEToCiJ%2F%2FbRb5WOc58WD%2Fj03qt3dvb0j7%2Fxo5zHfJY8jnIBBjBaSCGjJDo1feKh0w8e99IzHvBx9Q%2BTMIv59In5hBGCLKDPnVz5MAApkzR59PwjWiljzXEL0IEHCCEuXnur4pfHVlYy9Z%2BuTH0Q8ymJ%2BSzM5EXf6ABGgdSkE%2BWJh04%2FmEnSYCyHPiCL%2BSx5wY%2BeeSGfMZ9Syizmk5UfwABGWIaSE7X5il8e5NGOMfeA%2FZhP%2F5%2B%2B%2FZM8Br0Zo6R64%2BrFP2VBb5z5AQxgNJVISGPMqdlTItvxG6wIjqcHSClTk%2Fqul8V8ZrV2rmr%2FLObzD%2B%2F%2BsRKMUcgzYABjhxVWKbUwNSfEELYfx9ADsisRcZI8%2F%2FXv5zzmk9tegAGMOMYa3%2FUmShNiSCG34%2BYBWdTSPzz9%2FJdOfjGf6n956erLF1%2F1HDdf55EAAxi9SrAXhnKon5Ww1vquVwkqw3wUY%2BMB2Y5LFvOZT%2FXfaGz%2B%2Bu3fuNrdy%2FCAj00YKWUvDPP2ZeYc4vC5nM92AGFtYtIcDGk79E5%2FHM6GFiLm82d%2F%2BEWSpo7WLP58BolJ96JAeUp0AEd0ARiHPkBJ1e51nnn4qb5HLfVF%2FT8c84n6M20xgDFqam1Oyu1R9YAs6ifPMZ%2B9qPfzf%2F9lL%2Bqx8QsYwECn33B%2FAa10J%2Bo12o08%2FDIj6QFKqU7YefJLj%2BU55vPn%2F%2F7PrV7HczzUvxDTFgMYgUEkpJTdXm%2B4oiCFTNN0t7MrBn4PYBw8QEnVDbtn5888%2B9h3chj0dijmc8Xnu813PTi7vZ6Ukj1yDGA0Sgm7vLmSw2lWdA%2FIYj7PzJ7%2B6Td%2F7GgnV0FvWcxnkiYv%2FvtLy1t3CHugA%2Bg7hMF97iQcfg1hhNHaWd1ZM9aqPHl20c8FKanCJNqP%2Bcxd1E%2FWgP7mnd8tbSyXgzLXfe9j5pIHRwdw5AY87MVxPExpsMLVzubu1sr2ipD5Km2K2wdIKaMkqgbln3zzP%2BU55vOt6%2B%2BUfdT%2F3t5sHMdh2OOeBAbQn1Ji%2BGNayNSk7y1eEbnZBii0B2RBb4EX%2FOSb%2Fxh4QZ5jPst%2BiZWfgk5bDGAkRpK1Q6%2B%2FjDW%2B619Zfr%2FR3lVS5W19s1geIKVM0tR3%2FSzoLfcxn6j%2F%2FTxD9gAwgD6JRZKEcTT0djI7DfLHK2%2FksAkokAdIKY0xjtbEfI5o4b93bipJknzt6GAAxSXNRxpE4Pl%2FvfXe9dUbSqocFob594C9mM80%2Fv4TzxLzyYQFh6Wyzxc1Y8NeKGtS2CFfMLfWuo776pv%2FOv93cxOlidydWsn9uaAs5vOHF55%2F5OzD%2BVT%2F66s3%2F%2BefXvVdTwo2MO%2FzHUspw15ojZVKYqJ0AP0oKNK8FBRaqW7U%2FdUbr%2BytSlnWgu7hF0tyH%2FP56pu%2Fdh2H4ysjM2Fzjv6bH36Lp%2FCZiwbCCqu1np6azsmv5Gp3u1Vf2V556PSD2UJBPvuAB05%2BIYzD2xtLvuMNXc6UUu1e%2B7tf%2B%2FaTDzye55jPMI5Y%2FDni2JNSbmxtRHGkpOQ0EB1APwq0PB0qMNaUvGB5a%2BXF119qdHbpAz5%2FlEvV7nWefvipZx6%2BkOOYz5%2BHcYj69%2BWRsnmOAfRpMOXyUEHmASvbq%2F%2FtN%2F99o7EppWRP%2BDPUP4v5fO7x7%2BUz5jOMo1%2B98Uo36rnaRf2PPupycmwPAxipIRXlbEhlNwPCOPzZH36x0djkXNAnj%2B88x3weCnrbadd9x%2BfIf18eacQZ0LtGP8MewF2prZ2arAW%2Bn6uPzFlhtdJxEr9%2F5%2Fr5%2BbPVoJK3U%2B1iqPsBSqpu1D07f%2BZHT%2F%2B9lDKHQW9REr34%2Bi%2BXt1YCl6C3%2Fr30Xm%2B7voMB0AH0U8LymS5rrXW0Qx%2FwKeqf05jPzAGklC%2F98VdLxHz2%2B6kOPb8dAxjJUdXNtCx3vx0e8EnqHybhmdmTH8R8ijwGvd3eWCLqp7%2FDTAjR7XX5EgAG0GeiOMrt0QI84CM%2FKE7jklf60TMv5Dnm8%2BK1t0peifMq%2FcUYE8URzwED6GMDYKWUYRQNORQaD7i7H5GkSRb0lsPL0tkmzb%2F%2B5bdF%2FHxCITqAOI7DiCNAGEDfZSX3Z8vwACllavIe8%2Fn2jXfeIObz%2BAo1jgBhAMckW%2Fn%2Fyug4e4AU0lhjrf3pt36c55jP1%2F7y2wqf9zoeB2AH%2BF7Rz7zAMdC7ExdjPM%2BdmqwZY3I%2BvMbwbGgWnRYn8QtP%2FeCLJ87nOebTc1wm1HHVs0ptbm91Ol2lFCtAdAB9Li56YS%2F%2F6j%2BefcBBzGdug96ymE%2FPcfN1GnW02nRjTC%2FscQQIA%2Bi7%2FmcfB46iKCpEdzlWHiCljJM4nzGfB0FvxHwOYDhFURSG7ABjAMczvJIk7oVhUYbXmHiAUqrd6zzz8FOPnnsk22XN1Ss4FPQWaaWJ%2BjnWEq0XhkkSswFw9%2BhnfvhNnsLdN5hBEExWJwqxELT3gkd6P0BJ2Q67Tz%2F89e899p18xnxuN3f%2B%2B%2B9ejBJCno%2FdAbTW242dZquptSIFmg6g7%2FNZCCnbnXaxzhiMcB%2BQhT3kPObz5Yuv9oj5HNQQanfaQkqe9D0UiE8TBncvpMbM1Ka11gV7zSPXB2il2mH7q%2Be%2F8vdPfT%2FPMZ%2BrO2sEvQ1m%2FCRJsrKxZq1ll50O4LgGWRzH3V5PFW2XacT6ACVVJ%2Bydmzv73BPP5m3CZzGfvTh88fWXiPkc2DNXUnZ7vTzf1ccARsEAjLXtbruI58xGxgP2Yz5PZUFv%2BYz5fOXiq4ubyyUf9R%2FcM29324YrYBjAcY%2BzZruVFmcTeMQ8oCgxn9dWblZ8rvsObsykxjTbLW4AYADH3ml2ut2i3AYYMQ%2FIecxntrPy2l%2F%2B7eK1twKPz3sNdMBEUdTpdhU3ADCA4x5qSZoWcRug6B6Q%2F5hPJdVv3vndxfffqvhlzvwMuCzr9npJmrL%2BgwEMQpgarYYocrNZOA%2FoRN3sG8g5jfm0Rkl16fZ7F99%2Fkw%2B8DN4BhJSNVoMMuPuAMLh7Hm1SyDQ1s1PTubp2dD%2FvvkBnQ6Pw9sbSf%2F7bn56cPpHPsId3Fy%2B%2F8udf%2B67HFBl0DatUmqbLq6uWHRcMYDCqlKZpbWIy8DxTzN3gYnmAEOILC%2Be%2FeOL8mdlTebvw9ZGYT%2BrPwbuvVqrd7a5vblD%2B34998gjuxwCMaew2RmDAFWItKHvmp2dP2Zx9kzlT%2F%2BWtO%2FvqL1n4H8rYaOw20oKXYhhAwbrORqs5GptORfEAa63M2e%2BTxXz%2B8j9edjQxn0NT%2FyRNG61m0ddjMYAiKaaSstfrdjodrdQInPcoyp5wvtzog5jPcDSGQRHHrVaq0%2Bn0el0lJa%2FgPtBPv0Aa6H3WHa7rTk1OmlHpPfO%2FH5Ar9SfmMxeDVuu1rc1Gq6m1ogOjAxiUBOytAu2O0tHjoqwF5UH9ifnMTx3WaO0qpXgHGMBAZUBJ2ev1RmYVCA%2B4O%2BP%2FIOZzrb7uu1z3HeZY3V%2F%2F6SkpBTaMAQy4%2BkiNqTd3R2ydBA%2F4DPUXVmTqT8xnTuZgvbnL%2BR8MYEjPTqlGczdOkhE7gYAHfJoDSClfe%2Fs3i5tLZWI%2BczD74iRpNHc5%2F4MBDEcllZSdXqfZao3eCQQ84OMPJIv5fHfxcsWvpFw6zcHsa7ZanV6H8z8YwNA6UCHkzm5DjGIHigcccDjms%2BRR%2B%2Bdl%2Bu3sNoSQrP9gAMMsQxq7jV7YG8k%2BFA8QQhhjlFS%2Fv%2FT6n66%2BWQnKhmIzD7KlVC%2FsNXYblP9HRD%2F999wDOMJAlCpOEt%2Fza9WJUd2MGuf7AcYapdS7i5d%2F%2B9c%2FlPwArclNXaI3tre263VHa07%2F0wEM1wPkdn1nhLPIx7YPOBz05jqc988L2fH%2F7fqOYvEHAxi6OCqlOp1Oq90a4TyAMfSAQ%2Br%2Fahb0xmjPyVDUSrXarU6no0jgwADyUI8Ya7fqO2Kk65Gx8oBM%2FdfqG6%2B%2B%2BZq7F%2FOJ0ORoym3Vd%2Fj%2BOwaQm5JE6516vdPtjnYo2Jh4wEHM54uvvySlVJKQmXyV%2F51ud6de11pT%2Fh8dfYEwuH40AXGauq4zNTE62XCfOmJGek%2F4UMznL8I4JOgtbzhar21t1Hd3tda8mD5M56df%2BAZP4ei6IaUIo3B2elaPwb3EUfWATP2b3eb%2F89v%2FD%2FXP43qFUkma3lq6bbmK0a9HyiPo19AMo6jeqI9DNPxIrgUdxHz%2B6o1XulGXmM8cviCtVL1RD6OI%2BAcMIHdIIdY210f4POgIe8DhmM%2FlrVXfIeYzf%2FNLyiRN1zbX2fnFAHJZnmjd6nR2GnVnPLanRsYDPhLzSdhDXgeb3mnUW50O278YQH6LlK2d7fE5oDYiHkDMZxFmlrF2a2ebo58YQI6bAKUazd1Gc3d8PhJbdA8g5pOZNc6QBdTvOsXYNE1mp2fGaxgV81xQduEri%2Fks%2ByWC3nI7raSUt5cXe2GoleJWBh1AvkuV3bErVYrYB2Qxn29cvfinq38m5rMA5f8u5T8GUIRqxQqxtr5u9z4YMEYTtUAecBDz%2BYd3%2F1gJKoaVHyYUBgB9LFjqu41xK1iK4gGHYz657ZX%2F2VTfbbD6jwEUqWYRQiyv3BnDz1Xn3wMy9b%2B8dJWYz0JMpdSY5ZU7gvL%2FeNAX2ATuuwjufbEoDIJgslIdQxvI7Z5wpv4bjc1fvvGykkopgt5yXUy4jrOxs722uaEdGjU6gKIVL2sb43IxuBB9wEHM58%2F%2B8IskTUmTz%2F8MStJ0bWOd2h8DKJ4CZheDVzfWnbG8uJg3D%2FhYzCe3SfM%2FfvTqxjpXf4%2B3Wb%2Fw96SBHl8JI7q97kxt2nGcMR1e%2BVgLytS%2FF%2FX%2B39%2F9rBt2%2Bb5jASpTpaIourF0S1grhBSs1NEBFK6IUUqFUbi8tqLVmJYweegDDmI%2Bf%2F7v%2F9zqdTzHQ%2F0L0EArvby2EkahUgr1xwAKLH9bO1u7rebYHjccrgd8OOZzxXc8on4KMWB2W82tnS0O6WIAxSY7x7a0smzH%2BBOmw%2FKALOYzSZMX%2F%2F2l5a07xHwWZcpYa5dWlsfw%2BBwGMJraV282Nsa7nBmOB1ghpfzNO79b2lgu%2BSXUvyjjZGNnq95sUP4PAH3heTaBj7%2BoEbLd6UzXpsZ2N3hvtA1wT%2Fgg5vPN638p%2B2XUvxgFqVJRFF2%2FddMay9YvHcBoVDXZvbDe8ur47gZ%2FWh9wTE8js5ZDMZ%2BofzGGh1Z6eXWlF%2FYUqZ8YwKg1ttubO436mDe2hzzg5xuNzWzBt8%2Fq%2F9GYT9S%2FMANjp1Hf2N5k8QcDGDWklMKKW8uLSZqM%2BSetrbWudrtR71dvvBLGUX89gJjPoiqRUkma3FpezHZueCCDQT%2FFRbDBqF4WEBSFxtrZqenUpOM8yq2wrnZbYfvO1spDpx%2FMKr6jP5DDMZ%2Bu4zLqilX%2B31pe2m7sOMT%2B0AGM8Chf21hnISgTa9%2Fxl7dWXnz9pTAOpZRHWaux1lphlVSXbr%2F38sV%2FIeazcPNip1Ff21hnXmAAo4yUUkhxM1sIkuP%2B8I01JS9Y2V79b%2F%2F2P1Z31rIHcq%2Fz31q71z1Y8du%2F%2FuF%2FvfnrTP2J%2BSyMBkmVpMnN5UUhWfwZNGQBDXy4KxWyEHQg38K62mn3OpeXrgohTs2czGwg%2B0DjZzwcmxmF3Ptg7Fp9%2FZ%2FfeOXy0hXf9RljBSv%2FHefW8tJOY4fyHwMYFw9otlulIJioVPEAK4TWWghxY%2B3WzbXbjnZqlZqjdfZYMkWwwh78S%2Bx%2FJVxKKYXc2t1%2B%2Fb0%2F%2Fvavv2%2B0dwMvQEGKpf6u427ubN1aXnK05oEMHodHMAzFk0qKm0uL1UrVZctrX%2BVLXmlzd%2Bvli69OVd54%2BMxD5%2BfPzdVmA9fPCv3Df7%2Bxpt5qrNXXry6%2Fv7R5J0oi3%2FU9l5yf4lVCvSi8ubSo5AdTg8cySOR%2F%2Bb%2F%2BK09hCM9dyiRNpiZrX3nwyxxVPPxYhBBJmiZprJSeKFWmKlNTldpEuWqtkFKkxqzXN1q9dr1VD%2BNISek6bs4%2FQA%2BfYQDvXbtS3yX1gQ5g%2FGre7OTD8uqdc6fOxknM9tdBK%2BAo7WrHCtsJu81O69b6orVmLxReSiWVksrRuuT5VghrLepfxBftOu7iytJOo87nGTCA8fWApZU71XJ1qlZLkgQP2F8I2NviVVJpV0shDq8MZNsA1lqDahR35DvOTqO%2BtHKH2n%2FYBsDDH%2B6ih5DXb9%2F42iNfZTPg08TCZrIPo4JSKoyi67dvSCF5sUN%2BFzyC4U%2BGMLp%2B6wblP4xL0SPl9Vs3wjAa80wUDAA%2BaIdvLy1yCR7GYbTfXlrcadQZ7RgA7M8K7dxZX13bWGdDDEZ4nLuOu7axfmd9laX%2FnODwEnLTF6sbS7dLQWmiUk1SNoRhBKuc3VbzxtJtKRWyQwcAH34TSpnUvH%2FzepzESinqIxgl9VdKxUn8%2Fs3rJjUs%2FWMA8AmTRGvdDXvvXbtqjWWSwCgVN9bY965d7YY9rTXFDQYAn9MmK8kn8WA0hrVQUt1Yur3barL0jwHA53iA67irG%2Bs3l267LrMFij%2BeXefm0u1VDjhgAHDXHuDcWV9bWV9zXeYMFFr93ZX1tTvra9xzxADgrntmIbSS127fXF1fZ%2BZAceuY1fX1a7dv6r20T4Zx7nB4Kzn2AHV98UYpCGoTk6TFQdHU3200d68v3tB7xxksHkAHAPeAFFIKefna1d1Wk2uTUCD1dxxnt9W8fO1qNoZ5JjnuAFCV%2FHYBVkmVJMl7V6985eEvT1SrJIZCIdS%2F2Wq9d%2FVKkiYc%2BqQDgCNNJ611kibvXb3SbLfoA6AA6t9G%2FTEA6LsHXLnSwgMg3%2Brfarfeu4L6FwaygIoxtZTWSZpcunLl0S9%2FeaLCWhDktPZ%2F98qVNE2U1nyuhw4A%2Bu8B715hLQjyq%2F5JmihqfwwAjmOaaTwA8q3%2BrPxgADAQD2i1uCcMQx%2BQrus2W6g%2FBgAD9oD3rzR2d7knDMNUf8dp7O6%2B%2Bz7qjwHAYD0gTdN3Lr%2B7urFOHwDDqv1XN9bfufxumqaof0FxeAQFnX7ZR2Pev3nDCnF64WScxDwWGBie691ZX71284bWWkqJ%2BmMAMGgPEEJora%2FdvNnr9b547rwxxhjD8VA47spDKXX99s3l1VWt9cFQhCLCElDxPdxRiyvL79%2B4ftAW8EzgePvOG9cXV5YdB%2FUYhQ4AvSj0pBRWCM91VzfWOt3Oo19%2BxNUu35SH41B%2FRztxGr975fJuq%2BllO09WEPVWaPRTP%2FgbnsII2IDWutfrbe%2FsVKvVcqmUpikeAH1U%2F%2F3jnpfbnQ7f9hoZaOJGqEBznF4YXrr87tr6uue6PBPoF57rrq2vX7r8bi8MuYE4SrAJPFIeoLU2xly9ca3d7Xzx3HlrLdvCcJQRpZSSUl67dfPO6opSiuOeo2YAvMwRm7FCSqX10sqdTrf70AMP%2BJ5Pchzcd08ZRuH7N25s13ccxxFCEPE2YrAENJq4rrvTqL996dJOve6yHAT3N4Tq9bcvXdppMIQwAChg%2BRYn8aWrl28tLWaNPM073M3IkVIqpW4tLV66ejlOYhb9Rxj2AEZ8Jkspby0tNlstloPgLuuGjyz7oP50AFDwXr5Rf%2BvSXze3tlzXFbQC8EnSL6R0XXdza%2ButS39l2YcOAEaqrEuS5L1rV3dbzfNnzmZ%2FSSsAHxkh1xZv31lbVUqx7IMBwEjNcCmlo%2FXy6kp9t%2FHA%2BS%2FMTE0naWo5JMrAUMp1nO36zo3bt9qdjus4lmUfDABGcLYL4bput9e7dOXyqYUTtAKo%2F0Hhv7K%2BJoQgWhwDgBGf89ldnsOtQJqm3Bcbt2GQrfMcFP6O43BObCwNgDc%2BfpNfCOE6brfbu3T58sLc%2FPkzZ4IgiJNEWIsNjP7bl9J13V6vd%2B3mzfXNjWwwWGtR%2F%2FHsAHjr49oKKCWEXV1fre%2FWz585uzA3L4QgRW7k%2Bz8hxOr62u3lpV6v5zqOENJaw8MZWwOAcZUDYYUQruvGcXzl2vsbW5vnz5yrTU6yIjSS0p%2Bt%2BTR2d28vL%2B7U61rr%2FRV%2FSsAxNgBePtIgpXRcd6fR2G025%2Bfmzp0%2BWwqCJEksK0Kj8n6zzf%2FFWzc2NjdTYxzXFdYS7AN0ACCsEMLa7Oj3ytradr1%2BeuHE6ZOnXMdNUmyg4NLvuEma3F5avLO%2BFoah4zic8QcMAD5BL4QQrusmSXJj8fbG9vbpkyfnZ2Ydx0nSlP3hgr1KKR3HSdN0ZWPtzupqq906WPNB%2FQEDgM9ZMeh0O1euvb%2ByuvqFc%2BdmatNCiiRNhBXYQO6lXziOI6zYru%2FcWlxstltKKaQfMAC4Bx3Jvv7R7nYuXbk8VaudOXFqqlaTUmIDOZd%2Ba%2B1Ovb68tlJvNMT%2B3S6kHzAAuB8bkELu1Ov1RuOwDaRpyt5Arpq2j0h%2F9g13K5B%2BwADgKPoibLakcGADC7Nzs9MzruOmaWKwgeE6tJSO4yZpsr65sb61eSD9QpLnAxgA9Gt5QXywvLC9szNRqZ4%2BeXJmesZzXGNNmqZCsC400NehtVZSRUm8sbF2Z3W12W5JKbXWe4kOiD9gAHAcNiCEaHc7V65fC%2Fzlhbm5%2BdnZcqkshGBdaACvIFvtEUJ0up2Nra31zc1e2Mv27bO%2FgcIfMAA4XhvIvjEZxdGt5cU7qyuzMzPzM3O1ycns6KExhobgOJ559nh36vWN7c2t7e04TbTSWWeG7sN9GQDDBo5Qjbratdaurq%2Bvb2xWK5W52dm56ZkgCA4aApzgiLp%2FUPL3er3Nne3Nra1Wu22scbTjatcKaw1zGOgAYAgStR8o5LjCila7vdtsLi3fmZmenp2erk1Ouq5rjUmNwQnuR%2Fe1lkrFcby1vb21s7O9sxPFkVJKK62lpuqHvhgAYwj6tkahtUpNurqxtraxVilXpqempqemJyoVnOBedT9JknqzuVPf2anX2522FUIr7bqOtcIKw6yF%2FhgAAwn6LGLyg43iZru1tHKnUi5P13CCe9T9Rr3d6RhjlFLacbK%2Fk%2Fg26HsHAHB8DYG21rY7nWbrAyeYmZoul0qe61ohjDEHSxnjYwYH%2F3v3Dm4KEcVxq93e%2FrDuHzxAlnoAA4ARcYLl1RXf82qTtZmpqUq57Ht%2Bdo5ltM3go6IvZZqmYRS2O53ter2x2wijKE3Tw7ov%2BDg7YAAwek4QRtHK%2Btrq%2BprjONVypTY5OVGtVsoVz3WVUvaQG2R%2FvIh%2BcPiXV1JKraWUxpgojtuddrPVauzutjrtJEmsEFqp7Cw%2Fug8YAIz%2B6oe7v65db%2B7uNOpKKc91y%2BXyZHWiWqmWg8D3fUdrIeVHmgMhhJBCinxZwv55KPGRMl9YmxrTC8NOr9dqt3ZbzU6nE8WxMUYqpZVy9p8Dug8YAIyXEwghHK2F1tbaOEmynImsFi4FQblUqpQrlVIpCEqe6x7kHBzm8D9zMI3Cx3%2BolFJJlf2HzK6iOO71uu1ut91pd7rdbq8Xx3F2c%2BJgkUdwcRcwAMAJDpQ0K4eFEKkxzVar0dwVVmRx9oHv%2B55fLZfL5bLrOIEfOI6T7aBmXYIQIruBvCesWUF%2BdHWVey3Hgbtk2p1V99k%2BdpIkvbAXJ0mn02l1OmEU9sIwjmNjjJBCSSX3K32KfcAAAD7PDIRQSmu5VyYnSdKM413bXN%2FcK6Idxyn5gdKqUiprrculkuM4vuc7WgshXNfN1Foq9cnLNJ8l%2BB9aXrLGZD4Sx7EQIknTMAqTJOl0u2matrsdk5pu2EuSJFunkvsclPnZz0XxAQMAuGsz%2BPCqujok5Zkl7MZNa%2B12fWfvAzVSuo6jpBJSlINSVrRXy5WscrfWOo5TKZet%2FdTdAyuElKLd6SRJcvCnWp121k50el1hhbEmTpJs7SbzigMOanzKfMAAAI6lOfjAEqT6kJZbkaZpKlIhxE4YZv%2B%2Fre3tw7W9ksp%2BTvkvjP3QPduDlZ8DB3KU%2FsjPzZwKuYcCGgCDForfIuzL954wO9r5tD8iP%2BefKbTQn%2B1ApO0DHQBAYdqFj0j85%2FsKwJgYAIMdAGA8UTwCAIAx7QCIgwYAoAMAAAAMAAAAMAAAAMAAAAAAAwAAAAwAAAAwAAAAwAAAACDfEAYHAEAHAAAAY9UB0AAAANABAAAABgAAAKMOaaAAAHQAAACAAQAAAAYAAAAYAAAAYAAAAIABAAAABgAAAMWBMDgAgHE1APQfAGA8YQkIAAADAAAADAAAADAAAAAYTUgDBQCgAwAAAAwAAAAwAAAAwAAAAAADAACAokMWEAAAHQAAAIxVB0ADAABABwAAABgAAABgAAAAgAEAAAAGAAAABYc0UAAAOgAAAMAAAAAAAwAAAAwAAABGCMLgAADG1QDQfwCA8YQlIAAADAAAADAAAADAAAAAAAMAAAAMAAAAMAAAACgkpIECANABAAAABgAAABgAAACMJoTBAQCMqwGg%2FwAA4wlLQAAAGAAAAGAAAACAAQAAAAYAAAAYAAAAYAAAAIABAAAABgAAADmHOGgAADoAAAAYqw7A0gAAANABAAAABgAAABgAAABgAAAAgAEAAAAGAAAAGAAAAGAAAACAAQAAAAYAAAAYAAAADBPSQAEAxtUACIMDABhPWAICAMAAAAAAAwAAAAwAAAAwAAAAGCH%2Bf%2FLmDJZ6VQK6AAAAAElFTkSuQmCC%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%2C%22purpose%22%3A%22any%22%7D%5D%7D">
+<style>
+  :root{
+    --bg:#F7F4EE;
+    --surface:#FFFFFF;
+    --text:#1D211E;
+    --muted:#8B9089;
+    --line:#E9E3D9;
+    --check-line:#CFC8BC;
+    --accent:#6C8F73;
+    --accent-ink:#4A6B52;
+    --accent-soft:#E9EFE8;
+    --on-accent:#FFFFFF;
+    --toast-bg:#1D211E;
+    --toast-text:#FFFFFF;
+    --toast-action:#A9CFB2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111312;
+      --surface:#1A1D1B;
+      --text:#ECEDE8;
+      --muted:#8E948D;
+      --line:#282D29;
+      --check-line:#3C433D;
+      --accent:#8CB795;
+      --accent-ink:#A6CBAD;
+      --accent-soft:#1F2C23;
+      --on-accent:#101613;
+      --toast-bg:#262B27;
+      --toast-text:#F1F2ED;
+      --toast-action:#A9CFB2;
+    }
+  }
+
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  [hidden]{display:none!important}
+  html,body{height:100%;margin:0;padding:0;overflow:hidden}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR","Pretendard","Malgun Gothic",system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.45;
+    letter-spacing:-0.01em;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+    overscroll-behavior:none;
+    touch-action:manipulation;
+  }
+  button{font:inherit;color:inherit;cursor:pointer}
+  button:active{transform:scale(.97)}
+
+  .app{
+    position:fixed;
+    left:0;right:0;
+    top:var(--app-top,0px);
+    height:var(--app-h,100dvh);
+    display:flex;
+    flex-direction:column;
+    padding-top:env(safe-area-inset-top);
+    overflow:hidden;
+  }
+
+  /* ── header ── */
+  .hd{flex:0 0 auto;padding:8px 18px 0}
+  .hd-top{display:flex;align-items:center;justify-content:space-between;min-height:30px}
+  .hd-year{font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+  .today-btn{
+    border:1px solid var(--line);background:transparent;color:var(--accent-ink);
+    font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px;
+    transition:opacity .2s,color .2s;
+  }
+  .today-btn.is-current{color:var(--muted);opacity:.55;pointer-events:none}
+
+  .hd-date{display:flex;align-items:center;gap:4px;margin:0 0 12px}
+  .date-chip{
+    flex:1 1 auto;min-width:0;display:flex;align-items:baseline;gap:7px;
+    position:relative;padding:2px 4px;border-radius:12px;
+  }
+  .dt{font-size:29px;font-weight:700;letter-spacing:-0.035em;white-space:nowrap}
+  .wd{font-size:14.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+  .date-input{
+    position:absolute;inset:0;width:100%;height:100%;
+    opacity:0;border:0;padding:0;margin:0;background:transparent;
+    font-size:16px;-webkit-appearance:none;appearance:none;
+  }
+  .nav-btn{
+    flex:0 0 auto;width:38px;height:38px;display:grid;place-items:center;
+    border:0;background:transparent;color:var(--muted);border-radius:12px;
+    transition:background-color .15s;
+  }
+  .nav-btn:active{background:var(--line)}
+
+  /* ── progress ── */
+  .prog{padding-bottom:13px}
+  .prog-line{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:7px}
+  .prog-label{font-size:12.5px;color:var(--muted)}
+  .prog-label.all-done{color:var(--accent-ink);font-weight:600}
+  .prog-pct{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .bar{height:5px;border-radius:999px;background:var(--line);overflow:hidden}
+  .bar i{
+    display:block;height:100%;width:0;border-radius:999px;background:var(--accent);
+    transition:width .38s cubic-bezier(.22,.8,.24,1);
+  }
+
+  /* ── passes (횟수 관리) ── */
+  .passarea{padding:0 0 11px}
+  .passes{
+    display:flex;align-items:stretch;gap:8px;
+    overflow-x:auto;overflow-y:hidden;
+    margin:0 -18px;padding:1px 18px 2px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .passes::-webkit-scrollbar{display:none}
+  .pass-card{
+    flex:0 0 168px;min-width:0;
+    display:flex;flex-direction:column;gap:5px;
+    padding:7px 7px 9px 11px;
+    border:1px solid var(--line);border-radius:13px;
+    background:var(--surface);
+    animation:rowIn .26s ease both;
+  }
+  .pass-card.bump{animation:passBump .46s ease both}
+  .pass-card.full{background:var(--accent-soft);border-color:transparent}
+  @keyframes passBump{0%{transform:none}32%{transform:scale(1.035)}100%{transform:none}}
+  .pass-top{display:flex;align-items:center;gap:1px;min-height:20px}
+  .pass-name{
+    flex:1 1 auto;min-width:0;
+    font-size:13.5px;font-weight:700;letter-spacing:-.01em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .pass-ico{
+    flex:0 0 auto;width:23px;height:23px;padding:0;
+    display:grid;place-items:center;
+    border:0;border-radius:7px;background:transparent;color:var(--muted);
+  }
+  .pass-ico.add{color:var(--accent-ink)}
+  .pass-ico:active{background:var(--line)}
+  .pass-nums{
+    display:flex;align-items:baseline;gap:5px;min-width:0;
+    font-size:11.5px;line-height:1.2;color:var(--muted);white-space:nowrap;
+  }
+  .pass-count{
+    font-size:12.5px;font-weight:700;color:var(--text);
+    font-variant-numeric:tabular-nums;letter-spacing:-.01em;
+  }
+  .pass-card.full .pass-count{color:var(--accent-ink)}
+  .pass-bar{height:4px;border-radius:999px;background:var(--line);overflow:hidden}
+  .pass-bar i{
+    display:block;height:100%;width:0;border-radius:999px;background:var(--accent);
+    transition:width .35s cubic-bezier(.22,.8,.24,1);
+  }
+  .pass-add{
+    flex:0 0 auto;align-self:center;display:flex;align-items:center;justify-content:center;gap:5px;
+    padding:7px 13px;
+    border:1px dashed var(--check-line);border-radius:13px;
+    background:transparent;color:var(--muted);
+    font-size:12px;font-weight:600;white-space:nowrap;
+  }
+  .pass-add:active{background:var(--line)}
+
+  /* ── periods (기간) ── */
+  .pass-card.period{flex:0 0 186px}
+  .pass-card.period.before .pass-count{color:var(--muted);font-weight:600}
+  .pass-card.period.ended{background:var(--accent-soft);border-color:transparent}
+  .pass-card.period.ended .pass-name,
+  .pass-card.period.ended .pass-count{color:var(--accent-ink)}
+
+  /* ── pass tag on a linked task ── */
+  .pass-tag{
+    display:inline-block;margin-left:6px;padding:1px 6px 2px;border-radius:999px;
+    background:var(--accent-soft);color:var(--accent-ink);
+    font-size:11px;font-weight:700;line-height:1.35;letter-spacing:0;
+    font-variant-numeric:tabular-nums;vertical-align:1.5px;
+    text-decoration:none;white-space:nowrap;
+  }
+  .task.done .pass-tag{opacity:.7}
+
+  /* ── sheet (횟수 등록·수정) ── */
+  .sheet-wrap{
+    position:fixed;left:0;right:0;
+    top:var(--app-top,0px);height:var(--app-h,100dvh);
+    z-index:40;display:flex;align-items:flex-end;justify-content:center;
+  }
+  .sheet-back{
+    position:absolute;inset:0;background:rgba(18,22,19,.44);
+    opacity:0;transition:opacity .22s ease;
+  }
+  .sheet-wrap.show .sheet-back{opacity:1}
+  .sheet{
+    position:relative;flex:1 1 auto;width:100%;max-width:430px;
+    max-height:100%;overflow-y:auto;
+    padding:0 20px calc(16px + env(safe-area-inset-bottom));
+    background:var(--surface);color:var(--text);
+    border-radius:20px 20px 0 0;
+    box-shadow:0 -10px 32px rgba(0,0,0,.18);
+    opacity:0;transform:translateY(14px);
+    transition:transform .24s cubic-bezier(.22,.8,.24,1),opacity .2s ease;
+    scrollbar-width:none;
+  }
+  .sheet::-webkit-scrollbar{display:none}
+  .sheet-wrap.show .sheet{opacity:1;transform:none}
+  .sheet-grab{width:36px;height:4px;border-radius:999px;background:var(--line);margin:8px auto 14px}
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+  .sheet-title{font-size:16.5px;font-weight:700;letter-spacing:-.02em}
+  .sheet-x{flex:0 0 auto;border:0;background:transparent;color:var(--muted);font-size:13.5px;padding:6px 2px}
+  .seg{display:flex;gap:3px;padding:3px;margin:2px 0 8px;background:var(--bg);border-radius:11px}
+  .seg-btn{
+    flex:1 1 0;height:33px;border:0;border-radius:9px;background:transparent;
+    color:var(--muted);font-size:13.5px;font-weight:700;letter-spacing:-.01em;
+    transition:background-color .15s,color .15s;
+  }
+  .seg-btn.on{background:var(--surface);color:var(--text);box-shadow:0 1px 2px rgba(15,20,16,.09)}
+  .mini-btn{
+    flex:0 0 auto;border:0;border-radius:9px;
+    padding:8px 11px;background:var(--accent-soft);color:var(--accent-ink);
+    font-size:13px;font-weight:700;white-space:nowrap;
+  }
+  .field{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .field:last-of-type{border-bottom:0}
+  .field.err{border-bottom-color:#C07A70}
+  .form-err{margin:9px 0 0;font-size:12.5px;line-height:1.4;color:#B4685F}
+  .fl{flex:0 0 auto;min-width:0;font-size:14.5px;color:var(--text);white-space:nowrap}
+  .field > input[type=text]{
+    flex:1 1 auto;min-width:0;width:100%;
+    font:inherit;font-size:16px;text-align:right;
+    padding:5px 0;border:0;background:transparent;color:var(--text);outline:none;
+    -webkit-appearance:none;appearance:none;
+  }
+  .field input::placeholder{color:var(--muted)}
+  .field input[type=date]{
+    flex:1 1 auto;min-width:0;width:100%;
+    font:inherit;font-size:16px;text-align:right;
+    padding:5px 0;border:0;background:transparent;color:var(--text);outline:none;
+    -webkit-appearance:none;appearance:none;
+  }
+  .field input[type=date]::-webkit-date-and-time-value{text-align:right;margin:0}
+  .step{flex:0 0 auto;margin-left:auto;display:flex;align-items:center;gap:1px;background:var(--bg);border-radius:10px;padding:2px}
+  .step button{
+    width:30px;height:28px;padding:0;display:grid;place-items:center;
+    border:0;border-radius:8px;background:transparent;color:var(--accent-ink);
+    font-size:16px;font-weight:700;line-height:1;
+  }
+  .step button:active{background:var(--line)}
+  .step input{
+    width:38px;text-align:center;padding:0;border:0;background:transparent;color:var(--text);
+    font:inherit;font-size:16px;font-weight:700;outline:none;
+    -webkit-appearance:none;appearance:none;-moz-appearance:textfield;
+  }
+  .sheet-foot{display:flex;gap:8px;margin-top:18px}
+  .sheet-foot button{
+    flex:1 1 auto;height:47px;border:0;border-radius:13px;
+    font-size:15px;font-weight:700;
+  }
+  .btn-primary{background:var(--accent);color:var(--on-accent)}
+  .btn-ghost{background:var(--accent-soft);color:var(--accent-ink)}
+  .btn-danger{
+    flex:0 0 84px!important;background:transparent;color:#B4685F;
+    box-shadow:inset 0 0 0 1px var(--line);
+  }
+
+  /* ── scroll area ── */
+  .scroll{
+    flex:1 1 auto;min-height:0;
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+    padding:0 14px 14px;
+    scrollbar-width:none;
+  }
+  .scroll::-webkit-scrollbar{display:none}
+
+  /* ── carry over ── */
+  .carry{
+    display:flex;align-items:center;gap:10px;
+    background:var(--accent-soft);
+    border-radius:14px;padding:11px 12px 11px 14px;margin:2px 0 12px;
+    animation:rowIn .3s ease both;
+  }
+  .carry-text{flex:1 1 auto;font-size:13px;line-height:1.35;color:var(--accent-ink)}
+  .carry-text b{font-weight:700}
+  .carry-btn{
+    flex:0 0 auto;border:0;border-radius:999px;background:var(--accent);color:var(--on-accent);
+    font-size:12.5px;font-weight:700;padding:7px 13px;white-space:nowrap;
+  }
+
+  /* ── task list ── */
+  .list{list-style:none;margin:0;padding:0}
+  .task{
+    display:flex;align-items:flex-start;gap:11px;
+    padding:11px 2px 11px 4px;
+    border-bottom:1px solid var(--line);
+  }
+  .task:last-child{border-bottom:0}
+  .task.new{animation:rowIn .26s ease both}
+  @keyframes rowIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+
+  .check{
+    flex:0 0 auto;width:24px;height:24px;margin-top:1px;padding:0;
+    border-radius:50%;border:1.6px solid var(--check-line);background:transparent;
+    display:grid;place-items:center;
+    transition:border-color .2s ease,background-color .2s ease;
+  }
+  .check::after{
+    content:"";width:10px;height:5.5px;margin-top:-1px;
+    border-left:2px solid var(--on-accent);border-bottom:2px solid var(--on-accent);
+    border-radius:1px;
+    transform:rotate(-45deg) scale(.4);opacity:0;
+    transition:transform .18s ease,opacity .18s ease;
+  }
+  .task.done .check{background:var(--accent);border-color:var(--accent)}
+  .task.done .check::after{opacity:1;transform:rotate(-45deg) scale(1)}
+
+  .task-text{
+    flex:1 1 auto;min-width:0;padding-top:1px;
+    font-size:16px;line-height:1.42;word-break:keep-all;overflow-wrap:anywhere;
+    text-decoration:line-through;
+    text-decoration-color:transparent;
+    text-decoration-thickness:1.4px;
+    transition:text-decoration-color .3s ease,color .3s ease;
+    -webkit-user-select:none;user-select:none;
+  }
+  .task.done .task-text{text-decoration-color:currentColor;color:var(--muted)}
+
+  .edit-input{
+    flex:1 1 auto;min-width:0;
+    font:inherit;font-size:16px;line-height:1.42;
+    padding:5px 9px;margin:-4px 0;
+    border:1px solid var(--accent);border-radius:10px;
+    background:var(--surface);color:var(--text);
+    outline:none;
+    -webkit-user-select:text;user-select:text;
+  }
+
+  .acts{flex:0 0 auto;display:flex;align-items:center;gap:1px;margin:-3px -4px 0 0}
+  .act{
+    flex:0 0 auto;width:32px;height:32px;padding:0;
+    display:grid;place-items:center;border:0;border-radius:9px;
+    background:transparent;color:var(--muted);opacity:.8;
+    transition:opacity .15s,background-color .15s,color .15s;
+  }
+  .act:active{background:var(--line);opacity:1}
+  .act.del:active{color:#B4685F}
+  .act.move{color:var(--accent-ink);opacity:.85}
+  @media (hover:hover){
+    .task:hover .act{opacity:.55;color:var(--muted)}
+    .task:hover .act.del{color:#B4685F}
+    .task:hover .act.move{color:var(--accent-ink)}
+    .act:hover{opacity:1}
+  }
+
+  /* ── move all to next day ── */
+  .bulk{display:flex;justify-content:flex-end;margin:-2px 0 9px}
+  .bulk-btn{
+    display:flex;align-items:center;gap:5px;
+    border:0;border-radius:999px;padding:7px 13px 7px 11px;
+    background:var(--accent-soft);color:var(--accent-ink);
+    font-size:12.5px;font-weight:700;white-space:nowrap;
+    animation:rowIn .24s ease both;
+  }
+
+  .divider{
+    display:flex;align-items:center;gap:10px;
+    list-style:none;padding:18px 2px 7px;
+    font-size:11.5px;color:var(--muted);letter-spacing:.02em;
+  }
+  .divider::after{content:"";flex:1 1 auto;height:1px;background:var(--line)}
+
+  /* ── empty ── */
+  .empty{padding:46px 20px 30px;text-align:center;color:var(--muted);animation:rowIn .3s ease both}
+  .empty svg{opacity:.45;margin-bottom:14px}
+  .empty p{margin:0;font-size:13.5px;line-height:1.6}
+  .empty p.sub{margin-top:4px;font-size:12.5px;opacity:.8}
+
+  /* ── add bar ── */
+  .addbar{
+    flex:0 0 auto;position:relative;z-index:5;
+    display:flex;align-items:center;gap:9px;
+    padding:9px 14px calc(9px + env(safe-area-inset-bottom));
+    background:var(--bg);
+  }
+  .addbar::before{
+    content:"";position:absolute;left:0;right:0;top:-26px;height:26px;
+    background:linear-gradient(to bottom,transparent,var(--bg));
+    pointer-events:none;
+  }
+  .add-input{
+    flex:1 1 auto;min-width:0;
+    font:inherit;font-size:16px;
+    padding:12px 15px;
+    border:1px solid var(--line);border-radius:14px;
+    background:var(--surface);color:var(--text);
+    outline:none;-webkit-appearance:none;appearance:none;
+    transition:border-color .18s,box-shadow .18s;
+  }
+  .add-input::placeholder{color:var(--muted)}
+  .add-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .add-btn{
+    flex:0 0 auto;width:46px;height:46px;padding:0;
+    display:grid;place-items:center;
+    border:0;border-radius:14px;
+    background:var(--accent);color:var(--on-accent);
+    transition:opacity .18s,transform .12s;
+  }
+  .add-btn:active{transform:scale(.94)}
+
+  /* ── toast ── */
+  .toast{
+    position:fixed;left:50%;z-index:30;
+    bottom:calc(88px + env(safe-area-inset-bottom));
+    display:flex;align-items:center;gap:14px;
+    max-width:calc(100% - 32px);
+    width:max-content;
+    padding:11px 15px 11px 17px;border-radius:999px;
+    background:var(--toast-bg);color:var(--toast-text);
+    font-size:13.5px;line-height:1.2;
+    box-shadow:0 8px 24px rgba(0,0,0,.16);
+    opacity:0;transform:translate(-50%,14px);pointer-events:none;
+    transition:opacity .22s ease,transform .22s ease;
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+  .toast span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .toast button{
+    flex:0 0 auto;border:0;background:transparent;padding:0;
+    font-size:13.5px;font-weight:700;color:var(--toast-action);
+  }
+  .toast button[hidden]{display:none}
+
+  @media (min-width:560px){
+    body{background:#EFEBE3}
+    .app{left:50%;right:auto;width:430px;margin-left:-215px;box-shadow:0 0 0 1px var(--line)}
+  }
+  @media (min-width:560px) and (prefers-color-scheme:dark){
+    body{background:#0B0D0C}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hd">
+    <div class="hd-top">
+      <span class="hd-year" id="yearText">2026년</span>
+      <button class="today-btn" id="todayBtn" type="button">오늘</button>
+    </div>
+    <div class="hd-date">
+      <button class="nav-btn" id="prevBtn" type="button" aria-label="이전 날">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+      </button>
+      <label class="date-chip" id="dateChip">
+        <span class="dt" id="dateText">1월 1일</span>
+        <span class="wd" id="weekdayText">목요일</span>
+        <input class="date-input" type="date" id="datePicker" aria-label="날짜 선택">
+      </label>
+      <button class="nav-btn" id="nextBtn" type="button" aria-label="다음 날">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>
+      </button>
+    </div>
+    <div class="prog">
+      <div class="prog-line">
+        <span class="prog-label" id="progLabel">할 일을 적어보세요</span>
+        <span class="prog-pct" id="progPct"></span>
+      </div>
+      <div class="bar"><i id="barFill"></i></div>
+    </div>
+    <div class="passarea">
+      <div class="passes" id="passes"></div>
+    </div>
+  </header>
+
+  <main class="scroll" id="scroll">
+    <div class="carry" id="carry" hidden>
+      <div class="carry-text" id="carryText"></div>
+      <button class="carry-btn" id="carryBtn" type="button">가져오기</button>
+    </div>
+    <div class="bulk" id="bulk" hidden>
+      <button class="bulk-btn" id="bulkBtn" type="button" aria-label="미완료 할 일을 다음날로 넘기기">
+        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10h11M10.5 5.8 14.7 10l-4.2 4.2"/></svg>
+        <span id="bulkText">미완료 다음날로 넘기기</span>
+      </button>
+    </div>
+    <ul class="list" id="list"></ul>
+    <div class="empty" id="empty" hidden>
+      <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="24" cy="24" r="16.5"/>
+        <path d="M17 24.4l4.8 4.6L31.4 19"/>
+      </svg>
+      <p id="emptyTitle">아직 적은 할 일이 없어요</p>
+      <p class="sub" id="emptySub">아래에 적고 하나씩 체크해 보세요</p>
+    </div>
+  </main>
+
+  <form class="addbar" id="addForm" autocomplete="off">
+    <input class="add-input" id="addInput" type="text" placeholder="할 일을 적어보세요"
+           enterkeyhint="done" maxlength="200" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="새 할 일">
+    <button class="add-btn" id="addBtn" type="submit" aria-label="추가">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M12 5.5v13M5.5 12h13"/></svg>
+    </button>
+  </form>
+</div>
+
+<div class="toast" id="toast" aria-live="polite">
+  <span id="toastMsg"></span>
+  <button id="undoBtn" type="button" hidden>실행취소</button>
+</div>
+
+<div class="sheet-wrap" id="sheetWrap" hidden>
+  <div class="sheet-back" id="sheetBack"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-grab"></div>
+    <div class="sheet-head">
+      <span class="sheet-title" id="sheetTitle">횟수 등록</span>
+      <button class="sheet-x" id="sheetCancel" type="button">취소</button>
+    </div>
+    <div class="seg" id="segMode" role="tablist" aria-label="등록 종류">
+      <button class="seg-btn on" id="segPass" type="button" role="tab" data-kind="pass" aria-selected="true">횟수</button>
+      <button class="seg-btn" id="segPeriod" type="button" role="tab" data-kind="period" aria-selected="false">기간</button>
+    </div>
+    <div class="field" id="rowName">
+      <span class="fl">이름</span>
+      <input id="fName" type="text" maxlength="20" placeholder="예: 학원" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="횟수 이름">
+    </div>
+    <div id="passFields">
+    <div class="field">
+      <span class="fl">총 횟수</span>
+      <div class="step">
+        <button type="button" data-step="total" data-d="-1" aria-label="총 횟수 줄이기">－</button>
+        <input id="fTotal" type="text" inputmode="numeric" value="4" aria-label="총 횟수">
+        <button type="button" data-step="total" data-d="1" aria-label="총 횟수 늘리기">＋</button>
+      </div>
+    </div>
+    <div class="field">
+      <span class="fl">이미 사용한 횟수</span>
+      <div class="step">
+        <button type="button" data-step="used" data-d="-1" aria-label="사용한 횟수 줄이기">－</button>
+        <input id="fUsed" type="text" inputmode="numeric" value="0" aria-label="이미 사용한 횟수">
+        <button type="button" data-step="used" data-d="1" aria-label="사용한 횟수 늘리기">＋</button>
+      </div>
+    </div>
+    <div class="field" id="rowCharge" hidden>
+      <span class="fl">충전</span>
+      <div class="step">
+        <button type="button" data-step="charge" data-d="-1" aria-label="충전할 횟수 줄이기">－</button>
+        <input id="fCharge" type="text" inputmode="numeric" value="4" aria-label="충전할 횟수">
+        <button type="button" data-step="charge" data-d="1" aria-label="충전할 횟수 늘리기">＋</button>
+      </div>
+      <button class="mini-btn" id="chargeBtn" type="button">충전</button>
+    </div>
+    </div>
+    <div id="periodFields" hidden>
+      <div class="field" id="rowStart">
+        <span class="fl">시작일</span>
+        <input id="fStart" type="date" aria-label="시작일">
+      </div>
+      <div class="field" id="rowEnd">
+        <span class="fl">종료일</span>
+        <input id="fEnd" type="date" aria-label="종료일">
+      </div>
+      <p class="form-err" id="pErr" hidden>종료일은 시작일보다 빠를 수 없어요</p>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn-danger" id="pDelete" type="button" hidden>삭제</button>
+      <button class="btn-primary" id="pSave" type="button">등록</button>
+    </div>
+  </div>
+</div>
+
+<noscript>
+  <p style="padding:24px;text-align:center">이 앱을 쓰려면 브라우저에서 자바스크립트를 켜 주세요.</p>
+</noscript>
+
+<script>
+(function () {
+  'use strict';
+
+  var KEY = 'daily-todo.v1';
+  var WD = ['일', '월', '화', '수', '목', '금', '토'];
+
+  /* ── date helpers ── */
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function isoOf(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function dateOf(iso) {
+    var p = iso.split('-');
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+  function shift(iso, n) {
+    var d = dateOf(iso);
+    d.setDate(d.getDate() + n);
+    return isoOf(d);
+  }
+  function todayISO() { return isoOf(new Date()); }
+  function mdLabel(iso) {
+    var d = dateOf(iso);
+    return (d.getMonth() + 1) + '월 ' + d.getDate() + '일';
+  }
+  function uid() {
+    return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+  }
+
+  /* ── dom ── */
+  function $(id) { return document.getElementById(id); }
+  var el = {
+    year: $('yearText'), date: $('dateText'), wd: $('weekdayText'), picker: $('datePicker'),
+    today: $('todayBtn'), prev: $('prevBtn'), next: $('nextBtn'),
+    progLabel: $('progLabel'), progPct: $('progPct'), bar: $('barFill'),
+    list: $('list'), empty: $('empty'), emptyTitle: $('emptyTitle'), emptySub: $('emptySub'),
+    carry: $('carry'), carryText: $('carryText'), carryBtn: $('carryBtn'),
+    bulk: $('bulk'), bulkBtn: $('bulkBtn'), bulkText: $('bulkText'),
+    form: $('addForm'), input: $('addInput'), addBtn: $('addBtn'),
+    toast: $('toast'), toastMsg: $('toastMsg'), undo: $('undoBtn'),
+    scroll: $('scroll'),
+    passes: $('passes'),
+    sheetWrap: $('sheetWrap'), sheet: $('sheet'), sheetBack: $('sheetBack'),
+    sheetTitle: $('sheetTitle'), sheetCancel: $('sheetCancel'),
+    fName: $('fName'), fTotal: $('fTotal'), fUsed: $('fUsed'), fCharge: $('fCharge'),
+    rowName: $('rowName'), rowCharge: $('rowCharge'),
+    chargeBtn: $('chargeBtn'), pSave: $('pSave'), pDelete: $('pDelete'),
+    fStart: $('fStart'), fEnd: $('fEnd'), rowStart: $('rowStart'), rowEnd: $('rowEnd'),
+    passFields: $('passFields'), periodFields: $('periodFields'),
+    segMode: $('segMode'), segPass: $('segPass'), segPeriod: $('segPeriod'), pErr: $('pErr')
+  };
+
+  var ICON_PENCIL = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19.5 8.5a2.83 2.83 0 0 0-4-4L4 16v4z"/></svg>';
+  var ICON_TRASH = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14M10 7V5h4v2M6.5 7l.8 12.2h9.4L17.5 7"/></svg>';
+  var ICON_NEXT = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12h13.5M13.5 7.5 18 12l-4.5 4.5"/></svg>';
+  var ICON_PLUS_S = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5.5v13M5.5 12h13"/></svg>';
+  var ICON_MORE = '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5.5" cy="12" r="1.65"/><circle cx="12" cy="12" r="1.65"/><circle cx="18.5" cy="12" r="1.65"/></svg>';
+
+  /* ── state ── */
+  var store = { v: 1, tasks: {}, passes: [], periods: [] };
+  var view = todayISO();
+  var editingId = null;
+  var newIds = Object.create(null);
+  var reorderTimer = null;
+  var toastTimer = null;
+  var undoCb = null;
+  var composing = false;
+  var bumpId = null;
+
+  function readPasses(raw) {
+    var out = [];
+    if (!Array.isArray(raw)) return out;
+    raw.forEach(function (p) {
+      if (!p || typeof p !== 'object') return;
+      var name = typeof p.name === 'string' ? p.name.trim().slice(0, 20) : '';
+      if (!name) return;
+      var total = Math.floor(+p.total);
+      if (!isFinite(total) || total < 1) return;
+      if (total > 999) total = 999;
+      var used = Math.floor(+p.used);
+      if (!isFinite(used) || used < 0) used = 0;
+      if (used > total) used = total;
+      out.push({
+        id: (typeof p.id === 'string' && p.id) ? p.id : uid(),
+        name: name,
+        total: total,
+        used: used,
+        createdAt: typeof p.createdAt === 'number' ? p.createdAt : Date.now()
+      });
+    });
+    return out;
+  }
+
+  function isoOK(v) {
+    if (typeof v !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(v)) return null;
+    var d = dateOf(v);
+    return (isFinite(d.getTime()) && isoOf(d) === v) ? v : null;
+  }
+
+  function readPeriods(raw) {
+    var out = [];
+    if (!Array.isArray(raw)) return out;
+    raw.forEach(function (p) {
+      if (!p || typeof p !== 'object') return;
+      var name = typeof p.name === 'string' ? p.name.trim().slice(0, 20) : '';
+      if (!name) return;
+      var s = isoOK(p.start), e = isoOK(p.end);
+      if (!s || !e) return;
+      if (e < s) e = s;
+      out.push({
+        id: (typeof p.id === 'string' && p.id) ? p.id : uid(),
+        name: name,
+        start: s,
+        end: e,
+        createdAt: typeof p.createdAt === 'number' ? p.createdAt : Date.now()
+      });
+    });
+    return out;
+  }
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return;
+      var data = JSON.parse(raw);
+      if (!data || typeof data !== 'object') return;
+      var passes = readPasses(data.passes);
+      var periods = readPeriods(data.periods);
+      var known = Object.create(null);
+      passes.forEach(function (p) { known[p.id] = true; });
+      var src = (data.tasks && typeof data.tasks === 'object') ? data.tasks : {};
+      var out = {};
+      Object.keys(src).forEach(function (k) {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(k) || !Array.isArray(src[k])) return;
+        out[k] = src[k].filter(function (t) {
+          return t && typeof t.text === 'string' && t.text.length;
+        }).map(function (t) {
+          var pid = (typeof t.passId === 'string' && known[t.passId]) ? t.passId : null;
+          return {
+            id: typeof t.id === 'string' && t.id ? t.id : uid(),
+            text: t.text,
+            done: !!t.done,
+            doneAt: typeof t.doneAt === 'number' ? t.doneAt : null,
+            createdAt: typeof t.createdAt === 'number' ? t.createdAt : Date.now(),
+            passId: pid,
+            passCounted: pid ? !!t.passCounted : false
+          };
+        });
+        if (!out[k].length) delete out[k];
+      });
+      store = { v: 1, tasks: out, passes: passes, periods: periods };
+    } catch (e) { /* first run or blocked storage */ }
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(store));
+    } catch (e) {
+      toast('저장하지 못했어요. 사파리 저장 공간을 확인해 주세요', null);
+    }
+  }
+
+  function tasksOf(d) { return store.tasks[d] || []; }
+  function ensure(d) {
+    if (!store.tasks[d]) store.tasks[d] = [];
+    return store.tasks[d];
+  }
+  function isEmptyDay(d) { return !store.tasks[d] || !store.tasks[d].length; }
+
+  /* ── passes (횟수) ── */
+  function passOf(id) {
+    for (var i = 0; i < store.passes.length; i++) if (store.passes[i].id === id) return store.passes[i];
+    return null;
+  }
+  function passIndexOf(id) {
+    for (var i = 0; i < store.passes.length; i++) if (store.passes[i].id === id) return i;
+    return -1;
+  }
+  function passLeft(p) { return Math.max(0, p.total - p.used); }
+
+  /* ── periods (기간) ── */
+  function periodOf(id) {
+    for (var i = 0; i < store.periods.length; i++) if (store.periods[i].id === id) return store.periods[i];
+    return null;
+  }
+  function periodIndexOf(id) {
+    for (var i = 0; i < store.periods.length; i++) if (store.periods[i].id === id) return i;
+    return -1;
+  }
+  function dayGap(a, b) { return Math.round((dateOf(b) - dateOf(a)) / 86400000); }
+  /* 보고 있는 날짜(day)에 따른 기간 상태 — 체크 없이 날짜로만 계산 */
+  function periodInfo(p, day) {
+    var total = dayGap(p.start, p.end) + 1;
+    if (day < p.start) {
+      return { phase: 'before', total: total, n: 0, left: dayGap(day, p.start), pct: 0 };
+    }
+    if (day > p.end) {
+      return { phase: 'ended', total: total, n: total, left: 0, pct: 100 };
+    }
+    var n = dayGap(p.start, day) + 1;
+    var left = dayGap(day, p.end);
+    return { phase: left ? 'active' : 'last', total: total, n: n, left: left, pct: Math.round((n / total) * 100) };
+  }
+
+  /* 체크할 때 횟수 +1 (남은 횟수가 없으면 세지 않음) */
+  function countUp(t) {
+    if (!t.passId) return null;
+    var p = passOf(t.passId);
+    if (!p) { t.passCounted = false; return null; }
+    if (p.used < p.total) { p.used += 1; t.passCounted = true; }
+    return p;
+  }
+  /* 체크 해제할 때 -1 (이 체크로 올렸던 경우만) */
+  function countDown(t) {
+    if (!t.passId) return null;
+    var p = passOf(t.passId);
+    if (!p) { t.passCounted = false; return null; }
+    if (t.passCounted) { p.used = Math.max(0, p.used - 1); t.passCounted = false; }
+    return p;
+  }
+  function unlinkPass(id) {
+    var links = [];
+    Object.keys(store.tasks).forEach(function (d) {
+      store.tasks[d].forEach(function (t) {
+        if (t.passId !== id) return;
+        links.push({ d: d, id: t.id, counted: !!t.passCounted });
+        t.passId = null;
+        t.passCounted = false;
+      });
+    });
+    return links;
+  }
+
+  /* ── render ── */
+  function renderHeader() {
+    var d = dateOf(view);
+    el.date.textContent = (d.getMonth() + 1) + '월 ' + d.getDate() + '일';
+    el.wd.textContent = WD[d.getDay()] + '요일';
+    el.year.textContent = d.getFullYear() + '년';
+    if (el.picker.value !== view) el.picker.value = view;
+    var isToday = view === todayISO();
+    el.today.classList.toggle('is-current', isToday);
+    el.today.textContent = isToday ? '오늘' : '오늘로';
+    el.today.setAttribute('aria-disabled', isToday ? 'true' : 'false');
+  }
+
+  function renderProgress() {
+    updateBulk();
+    var list = tasksOf(view);
+    var total = list.length;
+    var done = 0;
+    for (var i = 0; i < list.length; i++) if (list[i].done) done++;
+    var pct = total ? Math.round((done / total) * 100) : 0;
+    el.bar.style.width = pct + '%';
+    renderCards();
+    if (!total) {
+      el.progLabel.textContent = '할 일을 적어보세요';
+      el.progLabel.classList.remove('all-done');
+      el.progPct.textContent = '';
+      return;
+    }
+    if (done === total) {
+      el.progLabel.textContent = '모두 끝냈어요';
+      el.progLabel.classList.add('all-done');
+    } else {
+      el.progLabel.textContent = '완료 ' + done + ' / ' + total;
+      el.progLabel.classList.remove('all-done');
+    }
+    el.progPct.textContent = pct + '%';
+  }
+
+  function passCardHTML(p) {
+    var left = passLeft(p);
+    var full = left === 0;
+    var pct = Math.round((p.used / p.total) * 100);
+    var h = '<div class="pass-card' + (full ? ' full' : '') + (bumpId === p.id ? ' bump' : '') + '"';
+    h += ' data-id="' + esc(p.id) + '" data-kind="pass" role="group" aria-label="' + esc(p.name) + ' ' + p.used + '/' + p.total + '회">';
+    h += '<div class="pass-top">';
+    h += '<span class="pass-name">' + esc(p.name) + '</span>';
+    if (!full) h += '<button class="pass-ico add" type="button" aria-label="이 날 할 일에 추가">' + ICON_PLUS_S + '</button>';
+    h += '<button class="pass-ico more" type="button" aria-label="횟수 수정">' + ICON_MORE + '</button>';
+    h += '</div>';
+    h += '<div class="pass-nums"><span class="pass-count">' + p.used + '/' + p.total + '회</span>';
+    h += '<span>' + (full ? '완료' : left + '회 남음') + '</span></div>';
+    h += '<div class="pass-bar"><i style="width:' + pct + '%"></i></div>';
+    return h + '</div>';
+  }
+
+  function periodNumsHTML(p, st) {
+    if (st.phase === 'before') {
+      return '<span class="pass-count">D-' + st.left + '</span><span>' + st.left + '일 후 시작</span>';
+    }
+    if (st.phase === 'ended') {
+      return '<span class="pass-count">기간 종료</span><span>' + mdLabel(p.end) + ' 마감</span>';
+    }
+    if (st.phase === 'last') {
+      return '<span class="pass-count">' + st.total + '/' + st.total + '일</span><span>오늘 마감</span>';
+    }
+    return '<span class="pass-count">' + st.n + '/' + st.total + '일</span><span>' + st.left + '일 남음</span>';
+  }
+
+  function periodAria(st) {
+    if (st.phase === 'before') return st.left + '일 후 시작';
+    if (st.phase === 'ended') return '종료됨';
+    if (st.phase === 'last') return '마지막 날';
+    return st.n + '일째, ' + st.left + '일 남음';
+  }
+
+  function periodCardHTML(p) {
+    var st = periodInfo(p, view);
+    var h = '<div class="pass-card period ' + st.phase + (bumpId === p.id ? ' bump' : '') + '"';
+    h += ' data-id="' + esc(p.id) + '" data-kind="period" role="group"';
+    h += ' aria-label="' + esc(p.name) + ' 기간, ' + periodAria(st) + '">';
+    h += '<div class="pass-top">';
+    h += '<span class="pass-name">' + esc(p.name) + '</span>';
+    h += '<button class="pass-ico more" type="button" aria-label="기간 수정">' + ICON_MORE + '</button>';
+    h += '</div>';
+    h += '<div class="pass-nums">' + periodNumsHTML(p, st) + '</div>';
+    h += '<div class="pass-bar"><i style="width:' + st.pct + '%"></i></div>';
+    return h + '</div>';
+  }
+
+  function renderCards() {
+    var sl = el.passes.scrollLeft;
+    var items = [];
+    store.passes.forEach(function (p) { items.push({ at: p.createdAt || 0, kind: 0, p: p }); });
+    store.periods.forEach(function (p) { items.push({ at: p.createdAt || 0, kind: 1, p: p }); });
+    items.sort(function (a, b) { return (a.at - b.at) || (a.kind - b.kind); });
+    var html = '';
+    items.forEach(function (it) {
+      html += it.kind ? periodCardHTML(it.p) : passCardHTML(it.p);
+    });
+    html += '<button class="pass-add" id="passAddBtn" type="button" aria-label="횟수·기간 등록">';
+    html += ICON_PLUS_S + '<span>횟수·기간</span></button>';
+    el.passes.innerHTML = html;
+    el.passes.scrollLeft = sl;
+    bumpId = null;
+  }
+
+  function updateBulk() {
+    var list = tasksOf(view);
+    var pending = 0;
+    for (var i = 0; i < list.length; i++) if (!list[i].done) pending++;
+    if (!pending) { el.bulk.hidden = true; return; }
+    el.bulkText.textContent = '미완료 ' + pending + '개 다음날로 넘기기';
+    el.bulk.hidden = false;
+  }
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function rowHTML(t) {
+    var editing = editingId === t.id;
+    var cls = 'task' + (t.done ? ' done' : '') + (newIds[t.id] ? ' new' : '');
+    var h = '<li class="' + cls + '" data-id="' + esc(t.id) + '">';
+    h += '<button class="check" type="button" role="checkbox" aria-checked="' + (t.done ? 'true' : 'false') + '" aria-label="완료 표시"></button>';
+    if (editing) {
+      h += '<input class="edit-input" type="text" value="' + esc(t.text) + '" maxlength="200" aria-label="할 일 수정">';
+    } else {
+      var tag = '';
+      if (t.passId) {
+        var lp = passOf(t.passId);
+        if (lp) tag = '<span class="pass-tag">' + lp.used + '/' + lp.total + '</span>';
+      }
+      h += '<span class="task-text">' + esc(t.text) + tag + '</span>';
+      h += '<div class="acts">';
+      if (!t.done) h += '<button class="act move" type="button" aria-label="다음날로 넘기기">' + ICON_NEXT + '</button>';
+      h += '<button class="act edit" type="button" aria-label="수정">' + ICON_PENCIL + '</button>';
+      h += '<button class="act del" type="button" aria-label="삭제">' + ICON_TRASH + '</button>';
+      h += '</div>';
+    }
+    return h + '</li>';
+  }
+
+  function renderList() {
+    var list = tasksOf(view);
+    var todo = [], done = [];
+    for (var i = 0; i < list.length; i++) (list[i].done ? done : todo).push(list[i]);
+    var html = '';
+    for (var j = 0; j < todo.length; j++) html += rowHTML(todo[j]);
+    if (done.length) {
+      html += '<li class="divider">완료 ' + done.length + '</li>';
+      for (var k = 0; k < done.length; k++) html += rowHTML(done[k]);
+    }
+    el.list.innerHTML = html;
+    newIds = Object.create(null);
+
+    var empty = list.length === 0;
+    el.empty.hidden = !empty;
+    if (empty) {
+      var isToday = view === todayISO();
+      el.emptyTitle.textContent = isToday ? '아직 적은 할 일이 없어요' : '이 날에는 할 일이 없어요';
+      el.emptySub.textContent = isToday ? '아래에 적고 하나씩 체크해 보세요' : '아래에 적으면 이 날짜에 저장돼요';
+    }
+  }
+
+  function lastPendingBefore(d) {
+    var keys = Object.keys(store.tasks).filter(function (k) {
+      return k < d && store.tasks[k].some(function (t) { return !t.done; });
+    }).sort();
+    return keys.length ? keys[keys.length - 1] : null;
+  }
+
+  function renderCarry() {
+    var src = lastPendingBefore(view);
+    if (!src) { el.carry.hidden = true; return; }
+    var n = tasksOf(src).filter(function (t) { return !t.done; }).length;
+    var label = src === shift(view, -1) ? '어제' : mdLabel(src);
+    el.carryText.innerHTML = label + ' 못 끝낸 할 일 <b>' + n + '개</b>';
+    el.carryBtn.textContent = view === todayISO() ? '오늘로 가져오기' : '여기로 가져오기';
+    el.carry.dataset.src = src;
+    el.carry.hidden = false;
+  }
+
+  function renderAll() {
+    renderHeader();
+    renderProgress();
+    renderList();
+    renderCarry();
+  }
+
+  /* ── actions ── */
+  function addTask(text) {
+    var v = (text || '').trim();
+    if (!v) return false;
+    var t = { id: uid(), text: v, done: false, doneAt: null, createdAt: Date.now() };
+    ensure(view).push(t);
+    newIds[t.id] = true;
+    save();
+    renderProgress();
+    renderList();
+    renderCarry();
+    scrollToTask(t.id);
+    return true;
+  }
+
+  function scrollToTask(id) {
+    var li = el.list.querySelector('.task[data-id="' + id + '"]');
+    if (!li) return;
+    try { li.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { li.scrollIntoView(false); }
+  }
+
+  function toggle(id) {
+    var list = tasksOf(view), t = null;
+    for (var i = 0; i < list.length; i++) if (list[i].id === id) t = list[i];
+    if (!t) return;
+    t.done = !t.done;
+    t.doneAt = t.done ? Date.now() : null;
+
+    var p = t.done ? countUp(t) : countDown(t);
+    if (p) bumpId = p.id;
+    save();
+
+    var li = el.list.querySelector('.task[data-id="' + id + '"]');
+    if (li) {
+      li.classList.toggle('done', t.done);
+      var chk = li.querySelector('.check');
+      if (chk) chk.setAttribute('aria-checked', t.done ? 'true' : 'false');
+    }
+    renderProgress();
+    renderCarry();
+    if (p && t.done && passLeft(p) === 0) toast('‘' + p.name + '’ ' + p.total + '회를 모두 채웠어요', null);
+    clearTimeout(reorderTimer);
+    reorderTimer = setTimeout(function () {
+      if (editingId) return;
+      renderList();
+      renderProgress();
+    }, 320);
+  }
+
+  function removeTask(id) {
+    var list = tasksOf(view), idx = -1;
+    for (var i = 0; i < list.length; i++) if (list[i].id === id) idx = i;
+    if (idx < 0) return;
+    var removed = list.splice(idx, 1)[0];
+    if (!list.length) delete store.tasks[view];
+    var back = removed.done ? countDown(removed) : null;
+    if (back) bumpId = back.id;
+    save();
+    renderList();
+    renderProgress();
+    renderCarry();
+    toast('삭제했어요', function () {
+      var l = ensure(view);
+      l.splice(Math.min(idx, l.length), 0, removed);
+      var again = removed.done ? countUp(removed) : null;
+      if (again) bumpId = again.id;
+      save();
+      renderList();
+      renderProgress();
+      renderCarry();
+    });
+  }
+
+  function startEdit(id) {
+    editingId = id;
+    renderList();
+    var inp = el.list.querySelector('.edit-input');
+    if (inp) {
+      inp.focus();
+      var n = inp.value.length;
+      try { inp.setSelectionRange(n, n); } catch (e) { /* iOS sometimes throws */ }
+    }
+  }
+
+  function commitEdit(value) {
+    if (!editingId) return;
+    var id = editingId;
+    editingId = null;
+    var list = tasksOf(view), t = null, idx = -1;
+    for (var i = 0; i < list.length; i++) if (list[i].id === id) { t = list[i]; idx = i; }
+    var v = (value || '').trim();
+    if (t) {
+      if (!v) {
+        list.splice(idx, 1);
+        if (!list.length) delete store.tasks[view];
+      } else {
+        t.text = v;
+      }
+    }
+    save();
+    renderList();
+    renderProgress();
+    renderCarry();
+  }
+
+  function carryOver(src) {
+    if (!src || src === view) return;
+    var pending = tasksOf(src).filter(function (t) { return !t.done; });
+    if (!pending.length) { renderCarry(); return; }
+
+    var target = ensure(view);
+    var have = Object.create(null);
+    target.forEach(function (t) { have[t.text.trim()] = true; });
+
+    var added = [], moved = [];
+    pending.forEach(function (t) {
+      var key = t.text.trim();
+      if (have[key]) return;
+      have[key] = true;
+      var item = { id: uid(), text: t.text, done: false, doneAt: null, createdAt: Date.now(),
+                   passId: t.passId || null, passCounted: false };
+      target.push(item);
+      added.push(item);
+      moved.push(t);
+    });
+
+    store.tasks[src] = tasksOf(src).filter(function (t) { return moved.indexOf(t) < 0; });
+    if (!store.tasks[src].length) delete store.tasks[src];
+
+    save();
+    renderList();
+    renderProgress();
+    renderCarry();
+
+    if (!added.length) { toast('이미 오늘 목록에 있어요', null); return; }
+    toast(added.length + '개를 가져왔어요', function () {
+      var tl = tasksOf(view).filter(function (t) { return added.indexOf(t) < 0; });
+      if (tl.length) store.tasks[view] = tl; else delete store.tasks[view];
+      var back = ensure(src);
+      moved.forEach(function (t) { if (back.indexOf(t) < 0) back.push(t); });
+      save();
+      renderList();
+      renderProgress();
+      renderCarry();
+    });
+  }
+
+  /* ── move to next day ── */
+  function moveToNext(ids) {
+    if (!ids || !ids.length) return;
+    var src = view, next = shift(src, 1);
+    var list = tasksOf(src);
+    var moving = [], seen = Object.create(null);
+    ids.forEach(function (id) {
+      if (seen[id]) return;
+      seen[id] = true;
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].id === id && !list[i].done) { moving.push({ t: list[i], idx: i }); break; }
+      }
+    });
+    if (!moving.length) return;
+
+    var movingIds = moving.map(function (m) { return m.t.id; });
+    var rest = list.filter(function (t) { return movingIds.indexOf(t.id) < 0; });
+    if (rest.length) store.tasks[src] = rest; else delete store.tasks[src];
+
+    var target = ensure(next);
+    var have = Object.create(null);
+    target.forEach(function (t) { have[t.text.trim()] = true; });
+
+    var created = [];
+    moving.forEach(function (m) {
+      var key = m.t.text.trim();
+      if (have[key]) return;
+      have[key] = true;
+      var item = { id: uid(), text: m.t.text, done: false, doneAt: null, createdAt: Date.now(),
+                   passId: m.t.passId || null, passCounted: false };
+      target.push(item);
+      created.push(item);
+    });
+
+    save();
+    renderList();
+    renderProgress();
+    renderCarry();
+
+    var msg;
+    if (!created.length) msg = '이미 다음날에 있어요';
+    else if (moving.length === 1) msg = '다음날로 넘겼어요';
+    else msg = created.length + '개를 다음날로 넘겼어요';
+
+    toast(msg, function () {
+      var tl = tasksOf(next).filter(function (t) { return created.indexOf(t) < 0; });
+      if (tl.length) store.tasks[next] = tl; else delete store.tasks[next];
+      var back = ensure(src);
+      moving.slice().sort(function (a, b) { return a.idx - b.idx; }).forEach(function (m) {
+        back.splice(Math.min(m.idx, back.length), 0, m.t);
+      });
+      save();
+      renderList();
+      renderProgress();
+      renderCarry();
+    });
+  }
+
+  /* ── passes: add · edit · charge · delete ── */
+  function readNum(inp, fallback) {
+    var v = parseInt(String(inp.value || '').replace(/[^0-9]/g, ''), 10);
+    if (!isFinite(v)) return fallback;
+    return v;
+  }
+
+  function addPassTask(id) {
+    var p = passOf(id);
+    if (!p) return;
+    if (passLeft(p) === 0) { openSheet('edit', 'pass', id); return; }
+    var list = tasksOf(view);
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].passId === p.id) { toast('이 날 할 일에 이미 있어요', null); return; }
+    }
+    var t = { id: uid(), text: p.name, done: false, doneAt: null, createdAt: Date.now(),
+              passId: p.id, passCounted: false };
+    var day = view;
+    ensure(view).push(t);
+    newIds[t.id] = true;
+    save();
+    renderProgress();
+    renderList();
+    renderCarry();
+    scrollToTask(t.id);
+    toast(mdLabel(day) + ' 할 일에 ‘' + p.name + '’ 추가했어요', function () {
+      var l = tasksOf(day).filter(function (x) { return x.id !== t.id; });
+      if (l.length) store.tasks[day] = l; else delete store.tasks[day];
+      newIds = Object.create(null);
+      save();
+      renderProgress();
+      renderList();
+      renderCarry();
+    });
+  }
+
+  var sheetMode = null;
+  var sheetKind = 'pass';
+  var sheetPassId = null;
+  var sheetPeriodId = null;
+
+  function setSheetKind(kind) {
+    sheetKind = kind;
+    var per = kind === 'period';
+    el.passFields.hidden = per;
+    el.periodFields.hidden = !per;
+    el.segPass.classList.toggle('on', !per);
+    el.segPeriod.classList.toggle('on', per);
+    el.segPass.setAttribute('aria-selected', per ? 'false' : 'true');
+    el.segPeriod.setAttribute('aria-selected', per ? 'true' : 'false');
+    el.fName.placeholder = per ? '예: 헬스장' : '예: 학원';
+    el.fName.setAttribute('aria-label', per ? '기간 이름' : '횟수 이름');
+    if (sheetMode) el.sheetTitle.textContent = (per ? '기간' : '횟수') + (sheetMode === 'edit' ? ' 수정' : ' 등록');
+    if (per) {
+      el.fEnd.min = el.fStart.value || '';
+      checkPeriodDates();
+    } else {
+      el.pErr.hidden = true;
+    }
+  }
+
+  function checkPeriodDates() {
+    var s = el.fStart.value || '', e = el.fEnd.value || '';
+    var bad = !!isoOK(s) && !!isoOK(e) && e < s;
+    el.rowEnd.classList.toggle('err', bad);
+    el.pErr.textContent = '종료일은 시작일보다 빠를 수 없어요';
+    el.pErr.hidden = !bad;
+    return !bad;
+  }
+
+  function openSheet(mode, kind, id) {
+    var p = (mode === 'edit' && kind !== 'period' && id) ? passOf(id) : null;
+    var q = (mode === 'edit' && kind === 'period' && id) ? periodOf(id) : null;
+    if (mode === 'edit' && !p && !q) return;
+    sheetMode = mode;
+    sheetPassId = p ? p.id : null;
+    sheetPeriodId = q ? q.id : null;
+    el.pSave.textContent = (p || q) ? '저장' : '등록';
+    el.fName.value = p ? p.name : (q ? q.name : '');
+    el.fTotal.value = p ? p.total : 4;
+    el.fUsed.value = p ? p.used : 0;
+    el.fCharge.value = 4;
+    el.rowCharge.hidden = !p;
+    el.fStart.value = q ? q.start : view;
+    el.fEnd.value = q ? q.end : shift(view, 29);
+    el.fEnd.min = el.fStart.value;
+    el.rowStart.classList.remove('err');
+    el.rowEnd.classList.remove('err');
+    el.pErr.hidden = true;
+    el.pDelete.hidden = !(p || q);
+    el.rowName.classList.remove('err');
+    el.segMode.hidden = !!(p || q);
+    setSheetKind(p ? 'pass' : (q ? 'period' : (kind === 'period' ? 'period' : 'pass')));
+    el.sheetWrap.hidden = false;
+    requestAnimationFrame(function () { el.sheetWrap.classList.add('show'); });
+    if (!p && !q) setTimeout(function () { try { el.fName.focus(); } catch (e) { /* ignore */ } }, 80);
+  }
+
+  function closeSheet() {
+    el.sheetWrap.classList.remove('show');
+    sheetMode = null;
+    sheetPassId = null;
+    sheetPeriodId = null;
+    if (el.fName === document.activeElement) el.fName.blur();
+    setTimeout(function () {
+      if (!el.sheetWrap.classList.contains('show')) el.sheetWrap.hidden = true;
+    }, 240);
+  }
+
+  function stepField(which, d) {
+    var inp = which === 'total' ? el.fTotal : which === 'used' ? el.fUsed : el.fCharge;
+    var min = which === 'used' ? 0 : 1;
+    var v = readNum(inp, min) + d;
+    if (v < min) v = min;
+    if (v > 999) v = 999;
+    inp.value = v;
+    if (which === 'total') {
+      var used = readNum(el.fUsed, 0);
+      if (used > v) el.fUsed.value = v;
+    }
+  }
+
+  function saveSheet() {
+    var name = (el.fName.value || '').trim().slice(0, 20);
+    if (!name) {
+      el.rowName.classList.add('err');
+      try { el.fName.focus(); } catch (e) { /* ignore */ }
+      return;
+    }
+    if (sheetKind === 'period') { savePeriod(name); return; }
+    var total = readNum(el.fTotal, 0);
+    if (total < 1) total = 1;
+    var used = readNum(el.fUsed, 0);
+    if (used > total) used = total;
+
+    if (sheetMode === 'edit') {
+      var p = passOf(sheetPassId);
+      if (!p) { closeSheet(); return; }
+      var wasName = p.name;
+      p.name = name; p.total = total; p.used = used;
+      bumpId = p.id;
+      save();
+      closeSheet();
+      renderProgress();
+      renderList();
+      toast(wasName === name
+        ? '‘' + name + '’ ' + used + '/' + total + '회로 저장했어요'
+        : '이름을 ‘' + name + '’(으)로 바꿨어요', null);
+    } else {
+      var np = { id: uid(), name: name, total: total, used: used, createdAt: Date.now() };
+      store.passes.push(np);
+      bumpId = np.id;
+      save();
+      closeSheet();
+      renderProgress();
+      toast('‘' + name + '’ ' + total + '회 등록했어요', function () {
+        store.passes = store.passes.filter(function (x) { return x.id !== np.id; });
+        save();
+        renderProgress();
+      });
+    }
+  }
+
+  function savePeriod(name) {
+    var s = el.fStart.value || '', e = el.fEnd.value || '';
+    var sOk = !!isoOK(s), eOk = !!isoOK(e);
+    if (!sOk || !eOk) {
+      el.pErr.textContent = '시작일과 종료일을 골라 주세요';
+      el.pErr.hidden = false;
+      el.rowStart.classList.toggle('err', !sOk);
+      el.rowEnd.classList.toggle('err', !eOk);
+      return;
+    }
+    if (e < s) {
+      el.pErr.textContent = '종료일은 시작일보다 빠를 수 없어요';
+      el.pErr.hidden = false;
+      el.rowEnd.classList.add('err');
+      try { el.fEnd.focus(); } catch (err) { /* ignore */ }
+      return;
+    }
+    el.rowStart.classList.remove('err');
+    el.rowEnd.classList.remove('err');
+    el.pErr.hidden = true;
+
+    if (sheetMode === 'edit') {
+      var p = periodOf(sheetPeriodId);
+      if (!p) { closeSheet(); return; }
+      p.name = name; p.start = s; p.end = e;
+      bumpId = p.id;
+      save();
+      closeSheet();
+      renderProgress();
+      renderList();
+      renderCarry();
+      toast('‘' + name + '’ 기간을 저장했어요', null);
+    } else {
+      var np = { id: uid(), name: name, start: s, end: e, createdAt: Date.now() };
+      store.periods.push(np);
+      bumpId = np.id;
+      save();
+      closeSheet();
+      renderProgress();
+      toast('‘' + name + '’ ' + (dayGap(s, e) + 1) + '일 기간을 등록했어요', function () {
+        store.periods = store.periods.filter(function (x) { return x.id !== np.id; });
+        save();
+        renderProgress();
+      });
+    }
+  }
+
+  function chargePass() {
+    var p = passOf(sheetPassId);
+    if (!p) return;
+    var n = readNum(el.fCharge, 0);
+    if (n < 1) n = 1;
+    p.total += n;
+    bumpId = p.id;
+    save();
+    closeSheet();
+    renderProgress();
+    renderList();
+    toast('‘' + p.name + '’ ' + n + '회 충전했어요 (총 ' + p.total + '회)', null);
+  }
+
+  function deletePass() {
+    var id = sheetPassId;
+    var idx = passIndexOf(id);
+    if (idx < 0) return;
+    var p = store.passes[idx];
+    var links = unlinkPass(id);
+    store.passes.splice(idx, 1);
+    save();
+    closeSheet();
+    renderProgress();
+    renderList();
+    toast('‘' + p.name + '’ 횟수를 지웠어요', function () {
+      store.passes.splice(Math.min(idx, store.passes.length), 0, p);
+      links.forEach(function (l) {
+        var arr = store.tasks[l.d] || [];
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i].id === l.id) { arr[i].passId = p.id; arr[i].passCounted = l.counted; }
+        }
+      });
+      save();
+      renderProgress();
+      renderList();
+    });
+  }
+
+  function deletePeriod() {
+    var idx = periodIndexOf(sheetPeriodId);
+    if (idx < 0) return;
+    var p = store.periods[idx];
+    store.periods.splice(idx, 1);
+    save();
+    closeSheet();
+    renderProgress();
+    toast('‘' + p.name + '’ 기간을 지웠어요', function () {
+      store.periods.splice(Math.min(idx, store.periods.length), 0, p);
+      save();
+      renderProgress();
+    });
+  }
+
+  function deleteCurrent() {
+    if (sheetKind === 'period') deletePeriod();
+    else deletePass();
+  }
+
+  /* ── toast ── */
+  function toast(msg, fn) {
+    el.toastMsg.textContent = msg;
+    undoCb = fn || null;
+    el.undo.hidden = !fn;
+    el.toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, fn ? 5000 : 2400);
+  }
+  function hideToast() {
+    el.toast.classList.remove('show');
+    el.undo.hidden = true;
+    undoCb = null;
+  }
+  el.undo.addEventListener('click', function () {
+    var fn = undoCb;
+    hideToast();
+    if (fn) { clearTimeout(toastTimer); fn(); }
+  });
+
+  /* ── events ── */
+  el.list.addEventListener('click', function (e) {
+    var li = e.target.closest ? e.target.closest('.task') : null;
+    if (!li) return;
+    var id = li.dataset.id;
+    var btn = e.target.closest('button');
+    if (btn) {
+      if (btn.classList.contains('check')) { toggle(id); return; }
+      if (btn.classList.contains('move')) { moveToNext([id]); return; }
+      if (btn.classList.contains('del')) { removeTask(id); return; }
+      if (btn.classList.contains('edit')) { startEdit(id); return; }
+      return;
+    }
+    if (e.target.closest('.task-text')) toggle(id);
+  });
+
+  el.list.addEventListener('keydown', function (e) {
+    var inp = e.target;
+    if (!inp.classList || !inp.classList.contains('edit-input')) return;
+    if (e.key === 'Enter' && !e.isComposing && !composing) {
+      e.preventDefault();
+      commitEdit(inp.value);
+    } else if (e.key === 'Escape') {
+      editingId = null;
+      renderList();
+    }
+  });
+
+  el.list.addEventListener('focusout', function (e) {
+    var inp = e.target;
+    if (!inp.classList || !inp.classList.contains('edit-input')) return;
+    if (editingId) commitEdit(inp.value);
+  });
+
+  /* ── pass / period card · sheet events ── */
+  el.passes.addEventListener('click', function (e) {
+    if (e.target.closest('#passAddBtn')) { openSheet('add', 'pass'); return; }
+    var card = e.target.closest('.pass-card');
+    if (!card) return;
+    var id = card.dataset.id;
+    var per = card.dataset.kind === 'period';
+    var btn = e.target.closest('button');
+    if (btn) {
+      if (btn.classList.contains('more')) openSheet('edit', per ? 'period' : 'pass', id);
+      else if (btn.classList.contains('add')) addPassTask(id);
+      return;
+    }
+    if (per) openSheet('edit', 'period', id);
+    else addPassTask(id);
+  });
+
+  el.segMode.addEventListener('click', function (e) {
+    var b = e.target.closest('.seg-btn');
+    if (!b || !b.dataset.kind) return;
+    setSheetKind(b.dataset.kind);
+  });
+
+  el.sheet.addEventListener('click', function (e) {
+    var st = e.target.closest('button[data-step]');
+    if (st) { stepField(st.dataset.step, +st.dataset.d); return; }
+  });
+
+  el.sheet.addEventListener('input', function (e) {
+    var inp = e.target;
+    if (!inp.classList || inp.tagName !== 'INPUT' || inp === el.fName || inp.type === 'date') return;
+    inp.value = String(inp.value || '').replace(/[^0-9]/g, '').slice(0, 3);
+  });
+
+  el.fStart.addEventListener('change', function () {
+    var s = el.fStart.value || '';
+    el.fEnd.min = s;
+    if (isoOK(s) && isoOK(el.fEnd.value) && el.fEnd.value < s) {
+      el.fEnd.value = s;
+      checkPeriodDates();
+    }
+  });
+  el.fEnd.addEventListener('change', checkPeriodDates);
+
+  el.sheetBack.addEventListener('click', closeSheet);
+  el.sheetCancel.addEventListener('click', closeSheet);
+  el.pSave.addEventListener('click', saveSheet);
+  el.pDelete.addEventListener('click', deleteCurrent);
+  el.chargeBtn.addEventListener('click', chargePass);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !el.sheetWrap.hidden) closeSheet();
+  });
+
+  el.prev.addEventListener('click', function () {
+    editingId = null;
+    view = shift(view, -1);
+    el.scroll.scrollTop = 0;
+    renderAll();
+  });
+  el.next.addEventListener('click', function () {
+    editingId = null;
+    view = shift(view, 1);
+    el.scroll.scrollTop = 0;
+    renderAll();
+  });
+  el.today.addEventListener('click', function () {
+    if (view === todayISO()) return;
+    editingId = null;
+    view = todayISO();
+    el.scroll.scrollTop = 0;
+    renderAll();
+  });
+  el.picker.addEventListener('change', function () {
+    if (!el.picker.value) return;
+    editingId = null;
+    view = el.picker.value;
+    el.scroll.scrollTop = 0;
+    renderAll();
+  });
+
+  el.carryBtn.addEventListener('click', function () {
+    carryOver(el.carry.dataset.src);
+  });
+
+  el.bulkBtn.addEventListener('click', function () {
+    var ids = tasksOf(view).filter(function (t) { return !t.done; }).map(function (t) { return t.id; });
+    moveToNext(ids);
+  });
+
+  function submitAdd() {
+    if (composing) return;
+    if (addTask(el.input.value)) el.input.value = '';
+    else el.input.focus();
+  }
+  el.form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    submitAdd();
+  });
+  el.input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.isComposing && !composing) {
+      e.preventDefault();
+      submitAdd();
+    }
+  });
+  el.input.addEventListener('compositionstart', function () { composing = true; });
+  el.input.addEventListener('compositionend', function () { composing = false; });
+
+  /* ── viewport (iOS keyboard / toolbar) ── */
+  function syncViewport() {
+    var vv = window.visualViewport;
+    if (!vv) return;
+    var root = document.documentElement.style;
+    root.setProperty('--app-h', Math.round(vv.height) + 'px');
+    root.setProperty('--app-top', Math.max(0, Math.round(vv.offsetTop)) + 'px');
+  }
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', syncViewport);
+    window.visualViewport.addEventListener('scroll', syncViewport);
+  }
+  window.addEventListener('resize', syncViewport);
+  window.addEventListener('orientationchange', function () { setTimeout(syncViewport, 250); });
+
+  /* ── keep "오늘" fresh if the app stays open past midnight ── */
+  var openDay = todayISO();
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState !== 'visible') return;
+    var now = todayISO();
+    if (now !== openDay) {
+      var wasToday = view === openDay;
+      openDay = now;
+      if (wasToday) { view = now; el.scroll.scrollTop = 0; }
+      renderAll();
+    }
+  });
+
+  /* ── boot ── */
+  load();
+  if (el.picker.value !== view) el.picker.value = view;
+  renderAll();
+  syncViewport();
+})();
+</script>
+</body>
+</html>
